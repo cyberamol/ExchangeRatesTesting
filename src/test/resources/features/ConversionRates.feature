@@ -14,9 +14,9 @@ Feature: Get and validate conversion rates for past and future dates using Forei
       | EndPoint   | QueryParam | BaseCurrency | StatusCode |
       | latest     | symbols    | GBP          |        200 |
       | latest     | symbols    | USD,GBP      |        200 |
-      | latest     | base       | GBP          |        200 |
-      | 2020-06-01 | base       | GBP          |        200 |
-      | 2020-05-31 | symbols    | USD,GBP      |        200 |
+      | latest     | base       | JPY          |        200 |
+      | 2020-06-01 | base       | RUB          |        200 |
+      | 2020-05-31 | symbols    | USD,CAD      |        200 |
 
   @UAT @Regression
   Scenario Outline: Confirm that API responds with correct base value for currency based on input
@@ -43,7 +43,7 @@ Feature: Get and validate conversion rates for past and future dates using Forei
     Examples: 
       | EndPoint | StatusCode | ErrorMessage                 |
       | BKG      |        400 | Base 'BKG' is not supported. |
-      |      123 |        400 | Base '123' is not supported. |
+      | 123      |        400 | Base '123' is not supported. |
       | @#$      |        400 | Base '@#$' is not supported. |
 
   @PastConversionRates @UAT @Regression
@@ -58,7 +58,7 @@ Feature: Get and validate conversion rates for past and future dates using Forei
       | EndPoint   | QueryParam | BaseCurrency | ResponseDate | CheckCurrencies |
       | 2020-06-01 | base       | INR          | 2020-06-01   | AUD,GBP         |
       | 2020-05-31 | base       | USD          | 2020-05-31   | NZD,INR         |
-      | 2019-12-31 | base       | USD          | 2019-12-31   | NZD,INR         |
+      | 2019-12-31 | base       | EUR          | 2019-12-31   | EUR,JPY         |
 
   @FutureConversionRates @UAT @Regression
   Scenario Outline: Validate that API returns data for today when queried for a future date
@@ -71,4 +71,4 @@ Feature: Get and validate conversion rates for past and future dates using Forei
     Examples: 
       | EndPoint   | QueryParam | BaseCurrency | ResponseDate | CheckCurrencies |
       | 2020-06-03 | base       | EUR          | Today        | NZD,INR         |
-      | 2020-12-31 | base       | EUR          | Today        | NZD,INR         |
+      | 2020-12-31 | base       | JPY          | Today        | USD,CHF         |
