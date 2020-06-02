@@ -4,7 +4,7 @@ Feature: Get and validate conversion rates for past and future dates using Forei
   Background: 
     Given Foreign Exchange Rates API is accessible
 
-  @UAT
+  @UAT @Regression
   Scenario Outline: Validate that API responds with correct status code when queried with different parameter combinations
     When API is hit with end point as "<EndPoint>" "<QueryParam>" "<BaseCurrency>"
     Then API Should respond with status code as "<StatusCode>"
@@ -16,7 +16,7 @@ Feature: Get and validate conversion rates for past and future dates using Forei
       | latest   | symbols    | USD,GBP      |        200 |
       | latest   | base       | GBP          |        200 |
 
-  @UAT
+  @UAT @Regression
   Scenario Outline: Confirm that API responds with correct base value for currency based on input
     When API is hit with end point as "<EndPoint>" "<QueryParam>" "<BaseCurrency>"
     Then API Should respond with status code as "200"
@@ -32,7 +32,7 @@ Feature: Get and validate conversion rates for past and future dates using Forei
       | latest   | base       | HKD          | INR,AUD         |
       | latest   | base       | NZD          | INR,AUD         |
 
-  @InvalidEndpoint @UAT
+  @InvalidEndpoint @UAT @Regression
   Scenario Outline: Validate results when incorrect/invalid endpoint is invoked
     When API is hit with end point as ?base="<EndPoint>"
     Then API Should respond with status code as "<StatusCode>"
@@ -44,7 +44,7 @@ Feature: Get and validate conversion rates for past and future dates using Forei
       | 123      |        400 | Base '123' is not supported. |
       | @#$      |        400 | Base '@#$' is not supported. |
 
-  @PastConversionRates @UAT
+  @PastConversionRates @UAT @Regression
   Scenario Outline: Validate that API returns data for specific past date
     When API is hit with end point as "<EndPoint>" "<QueryParam>" "<BaseCurrency>"
     Then API Should respond with status code as "200"
@@ -58,7 +58,7 @@ Feature: Get and validate conversion rates for past and future dates using Forei
       | 2020-05-31 | base       | USD          | 2020-05-31   | NZD,INR         |
       | 2019-12-31 | base       | USD          | 2019-12-31   | NZD,INR         |
 
-  @FutureConversionRates @UAT
+  @FutureConversionRates @UAT @Regression
   Scenario Outline: Validate that API returns data for today when queried for a future date
     When API is hit with end point as "<EndPoint>" "<QueryParam>" "<BaseCurrency>"
     Then API Should respond with status code as "200"
