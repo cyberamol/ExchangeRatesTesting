@@ -209,7 +209,7 @@ public class ConversionRatesAPISteps extends TestBase {
 				for (Map.Entry m : currencyData.entrySet()) {
 					if (m.getKey().equals(currency.trim())) {
 						actValue = m.getValue().toString();
-						if (actValue.isBlank() || actValue.isEmpty()) {
+						if (actValue.isEmpty()) {
 							logger.error("Response currency : '" + currency + "' , Actual value '" + actValue
 									+ "' is black or empty");
 							scn.write("Response currency : '" + currency + "' , Actual value '" + actValue
