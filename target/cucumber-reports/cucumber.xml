@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="2" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="16" time="17.503465">
+    <testcase classname="Get and validate conversion rates for past and future dates using Foreign Exchange Rates API" name="Validate that API responds with correct status code when queried with different parameter combinations" time="2.687813">
+        <system-out><![CDATA[Given Foreign Exchange Rates API is accessible..............................passed
+When API is hit with end point as "latest" "symbols" "GBP"..................passed
+Then API Should respond with status code as "200"...........................passed
+And Response should contain not null values for "GBP".......................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Get and validate conversion rates for past and future dates using Foreign Exchange Rates API" name="Validate that API responds with correct status code when queried with different parameter combinations 2" time="0.893097">
+        <system-out><![CDATA[Given Foreign Exchange Rates API is accessible..............................passed
+When API is hit with end point as "latest" "symbols" "USD,GBP"..............passed
+Then API Should respond with status code as "200"...........................passed
+And Response should contain not null values for "USD,GBP"...................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Get and validate conversion rates for past and future dates using Foreign Exchange Rates API" name="Validate that API responds with correct status code when queried with different parameter combinations 3" time="0.990174">
+        <system-out><![CDATA[Given Foreign Exchange Rates API is accessible..............................passed
+When API is hit with end point as "latest" "base" "GBP".....................passed
+Then API Should respond with status code as "200"...........................passed
+And Response should contain not null values for "GBP".......................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Get and validate conversion rates for past and future dates using Foreign Exchange Rates API" name="Confirm that API responds with correct base value for currency based on input" time="0.914053">
+        <system-out><![CDATA[Given Foreign Exchange Rates API is accessible..............................passed
+When API is hit with end point as "latest" "base" "GBP".....................passed
+Then API Should respond with status code as "200"...........................passed
+And Response should contain base currency as "GBP"..........................passed
+And Response should contain value "1.0" for "GBP"...........................passed
+And Response should contain not null values for "INR,AUD"...................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Get and validate conversion rates for past and future dates using Foreign Exchange Rates API" name="Confirm that API responds with correct base value for currency based on input 2" time="0.89502">
+        <system-out><![CDATA[Given Foreign Exchange Rates API is accessible..............................passed
+When API is hit with end point as "latest" "base" "INR".....................passed
+Then API Should respond with status code as "200"...........................passed
+And Response should contain base currency as "INR"..........................passed
+And Response should contain value "1.0" for "INR"...........................passed
+And Response should contain not null values for "PHP,AUD"...................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Get and validate conversion rates for past and future dates using Foreign Exchange Rates API" name="Confirm that API responds with correct base value for currency based on input 3" time="0.901148">
+        <system-out><![CDATA[Given Foreign Exchange Rates API is accessible..............................passed
+When API is hit with end point as "latest" "base" "AUD".....................passed
+Then API Should respond with status code as "200"...........................passed
+And Response should contain base currency as "AUD"..........................passed
+And Response should contain value "1.0" for "AUD"...........................passed
+And Response should contain not null values for "INR,USD"...................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Get and validate conversion rates for past and future dates using Foreign Exchange Rates API" name="Confirm that API responds with correct base value for currency based on input 4" time="0.888532">
+        <system-out><![CDATA[Given Foreign Exchange Rates API is accessible..............................passed
+When API is hit with end point as "latest" "base" "HKD".....................passed
+Then API Should respond with status code as "200"...........................passed
+And Response should contain base currency as "HKD"..........................passed
+And Response should contain value "1.0" for "HKD"...........................passed
+And Response should contain not null values for "INR,AUD"...................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Get and validate conversion rates for past and future dates using Foreign Exchange Rates API" name="Confirm that API responds with correct base value for currency based on input 5" time="0.945123">
+        <system-out><![CDATA[Given Foreign Exchange Rates API is accessible..............................passed
+When API is hit with end point as "latest" "base" "NZD".....................passed
+Then API Should respond with status code as "200"...........................passed
+And Response should contain base currency as "NZD"..........................passed
+And Response should contain value "1.0" for "NZD"...........................passed
+And Response should contain not null values for "INR,AUD"...................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Get and validate conversion rates for past and future dates using Foreign Exchange Rates API" name="Validate results when incorrect/invalid endpoint is invoked" time="0.959243">
+        <system-out><![CDATA[Given Foreign Exchange Rates API is accessible..............................passed
+When API is hit with end point as ?base="BKG"...............................passed
+Then API Should respond with status code as "400"...........................passed
+And Error message should be displayed as "Base 'BKG' is not supported.".....passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Get and validate conversion rates for past and future dates using Foreign Exchange Rates API" name="Validate results when incorrect/invalid endpoint is invoked 2" time="1.991284">
+        <system-out><![CDATA[Given Foreign Exchange Rates API is accessible..............................passed
+When API is hit with end point as ?base="123"...............................passed
+Then API Should respond with status code as "400"...........................passed
+And Error message should be displayed as "Base '123' is not supported.".....passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Get and validate conversion rates for past and future dates using Foreign Exchange Rates API" name="Validate results when incorrect/invalid endpoint is invoked 3" time="0.946963">
+        <system-out><![CDATA[Given Foreign Exchange Rates API is accessible..............................passed
+When API is hit with end point as ?base="@#$"...............................passed
+Then API Should respond with status code as "400"...........................passed
+And Error message should be displayed as "Base '@#$' is not supported.".....passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Get and validate conversion rates for past and future dates using Foreign Exchange Rates API" name="Validate that API returns data for specific past date" time="0.922795">
+        <system-out><![CDATA[Given Foreign Exchange Rates API is accessible..............................passed
+When API is hit with end point as "2020-06-01" "base" "INR".................passed
+Then API Should respond with status code as "200"...........................passed
+And Response should contain date as "2020-06-01"............................passed
+And Response should contain not null values for "AUD,GBP"...................passed
+And Response should contain base currency as "INR"..........................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Get and validate conversion rates for past and future dates using Foreign Exchange Rates API" name="Validate that API returns data for specific past date 2" time="0.910057">
+        <system-out><![CDATA[Given Foreign Exchange Rates API is accessible..............................passed
+When API is hit with end point as "2020-05-31" "base" "USD".................passed
+Then API Should respond with status code as "200"...........................passed
+And Response should contain date as "2020-05-31"............................passed
+And Response should contain not null values for "NZD,INR"...................passed
+And Response should contain base currency as "USD"..........................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Get and validate conversion rates for past and future dates using Foreign Exchange Rates API" name="Validate that API returns data for specific past date 3" time="0.897088">
+        <system-out><![CDATA[Given Foreign Exchange Rates API is accessible..............................passed
+When API is hit with end point as "2019-12-31" "base" "USD".................passed
+Then API Should respond with status code as "200"...........................passed
+And Response should contain date as "2019-12-31"............................passed
+And Response should contain not null values for "NZD,INR"...................passed
+And Response should contain base currency as "USD"..........................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Get and validate conversion rates for past and future dates using Foreign Exchange Rates API" name="Validate that API returns data for today when queried for a future date" time="0.883227">
+        <failure message="org.junit.ComparisonFailure: expected:&lt;2020-06-0[2]&gt; but was:&lt;2020-06-0[1]&gt;&#13;&#10;&#9;at org.junit.Assert.assertEquals(Assert.java:117)&#13;&#10;&#9;at org.junit.Assert.assertEquals(Assert.java:146)&#13;&#10;&#9;at stepDefinitions.ConversionRatesAPISteps.Response_should_contain_expected_date(ConversionRatesAPISteps.java:183)&#13;&#10;&#9;at ✽.Response should contain date as &quot;Today&quot;(file:src/test/resources/features/ConversionRates.feature:65)&#13;&#10;"><![CDATA[Given Foreign Exchange Rates API is accessible..............................passed
+When API is hit with end point as "2020-06-03" "base" "EUR".................passed
+Then API Should respond with status code as "200"...........................passed
+And Response should contain date as "Today".................................failed
+And Response for future date should match with response for today...........skipped
+And Response should contain not null values for "NZD,INR"...................skipped
+
+StackTrace:
+org.junit.ComparisonFailure: expected:<2020-06-0[2]> but was:<2020-06-0[1]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at stepDefinitions.ConversionRatesAPISteps.Response_should_contain_expected_date(ConversionRatesAPISteps.java:183)
+	at ✽.Response should contain date as "Today"(file:src/test/resources/features/ConversionRates.feature:65)
+]]></failure>
+    </testcase>
+    <testcase classname="Get and validate conversion rates for past and future dates using Foreign Exchange Rates API" name="Validate that API returns data for today when queried for a future date 2" time="0.877848">
+        <failure message="org.junit.ComparisonFailure: expected:&lt;2020-06-0[2]&gt; but was:&lt;2020-06-0[1]&gt;&#13;&#10;&#9;at org.junit.Assert.assertEquals(Assert.java:117)&#13;&#10;&#9;at org.junit.Assert.assertEquals(Assert.java:146)&#13;&#10;&#9;at stepDefinitions.ConversionRatesAPISteps.Response_should_contain_expected_date(ConversionRatesAPISteps.java:183)&#13;&#10;&#9;at ✽.Response should contain date as &quot;Today&quot;(file:src/test/resources/features/ConversionRates.feature:65)&#13;&#10;"><![CDATA[Given Foreign Exchange Rates API is accessible..............................passed
+When API is hit with end point as "2020-12-31" "base" "EUR".................passed
+Then API Should respond with status code as "200"...........................passed
+And Response should contain date as "Today".................................failed
+And Response for future date should match with response for today...........skipped
+And Response should contain not null values for "NZD,INR"...................skipped
+
+StackTrace:
+org.junit.ComparisonFailure: expected:<2020-06-0[2]> but was:<2020-06-0[1]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at stepDefinitions.ConversionRatesAPISteps.Response_should_contain_expected_date(ConversionRatesAPISteps.java:183)
+	at ✽.Response should contain date as "Today"(file:src/test/resources/features/ConversionRates.feature:65)
+]]></failure>
+    </testcase>
+</testsuite>

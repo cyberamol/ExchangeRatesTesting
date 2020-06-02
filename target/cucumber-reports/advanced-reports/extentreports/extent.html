@@ -1,0 +1,1281 @@
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='UTF-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+        <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css' />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <link href='https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ff53917fbbdb5ef820abbbe4d199a6942dc771ff/v3html/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>BDD Cucumber Framework Reports</title>
+
+	<style type='text/css'>
+		/* json-tree */
+		.jstBracket,.jstComma,.jstValue{white-space:pre-wrap}.jstValue{font-size:10px;font-weight:400;font-family:"Lucida Console",Monaco,monospace}.jstProperty{color:#666;word-wrap:break-word}.jstBool{color:#2525CC}.jstNum{color:#D036D0}.jstNull{color:gray}.jstStr{color:#2DB669}.jstFold:after{content:' -';cursor:pointer}.jstExpand{white-space:normal}.jstExpand:after{content:' +';cursor:pointer}.jstFolded{white-space:normal!important}.jstHiddenBlock{display:none}
+			
+      
+
+      
+    
+	</style>
+	
+	<script type="text/javascript">
+		/*! json-tree - v0.2.2 - 2017-09-25, MIT LICENSE */
+		var JSONTree=function(){var n={"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#x27;","/":"&#x2F;"},t=0,r=0;this.create=function(n,t){return r+=1,N(u(n,0,!1),{class:"jstValue"})};var e=function(t){return t.replace(/[&<>'"]/g,function(t){return n[t]})},s=function(){return r+"_"+t++},u=function(n,t,r){if(null===n)return f(r?t:0);switch(typeof n){case"boolean":return l(n,r?t:0);case"number":return i(n,r?t:0);case"string":return o(n,r?t:0);default:return n instanceof Array?a(n,t,r):c(n,t,r)}},c=function(n,t,r){var e=s(),u=Object.keys(n).map(function(r){return j(r,n[r],t+1,!0)}).join(m()),c=[g("{",r?t:0,e),N(u,{id:e}),p("}",t)].join("\n");return N(c,{})},a=function(n,t,r){var e=s(),c=n.map(function(n){return u(n,t+1,!0)}).join(m());return[g("[",r?t:0,e),N(c,{id:e}),p("]",t)].join("\n")},o=function(n,t){var r=e(JSON.stringify(n));return N(v(r,t),{class:"jstStr"})},i=function(n,t){return N(v(n,t),{class:"jstNum"})},l=function(n,t){return N(v(n,t),{class:"jstBool"})},f=function(n){return N(v("null",n),{class:"jstNull"})},j=function(n,t,r){var s=v(e(JSON.stringify(n))+": ",r),c=N(u(t,r,!1),{});return N(s+c,{class:"jstProperty"})},m=function(){return N(",\n",{class:"jstComma"})},N=function(n,t){return d("span",t,n)},d=function(n,t,r){return"<"+n+Object.keys(t).map(function(n){return" "+n+'="'+t[n]+'"'}).join("")+">"+r+"</"+n+">"},g=function(n,t,r){return N(v(n,t),{class:"jstBracket"})+N("",{class:"jstFold",onclick:"JSONTree.toggle('"+r+"')"})};this.toggle=function(n){var t=document.getElementById(n),r=t.parentNode,e=t.previousElementSibling;""===t.className?(t.className="jstHiddenBlock",r.className="jstFolded",e.className="jstExpand"):(t.className="",r.className="",e.className="jstFold")};var p=function(n,t){return N(v(n,t),{})},v=function(n,t){return Array(2*t+1).join(" ")+n};return this}();
+	</script>
+</head>
+	<body class='extent standard default hide-overflow bdd-report'>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo black"><img src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png"></a>
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
+			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
+		</ul>
+		<!-- report name -->
+		<span class='report-name'>Android - Cucumber Report</span>
+		<!-- report headline -->
+		<span class='report-headline'></span>
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<a href='#!'>
+			<span class='label blue darken-3 suite-start-time'>Jun 2, 2020 04:39:53 pm</span>
+			</a>
+		</ul>
+	</div>
+</nav>		<!-- container -->
+		<div class='container'>
+<div id='test-view' class='view'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+				<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+					<li status='skip'><a href='#!'>Skip <i class='material-icons cyan-text'>redo</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+			<!-- category toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button category-toggle' data-activates='category-toggle' data-constrainwidth='false' data-beloworigin='true' data-hover='true' href='#'>
+				<i class='material-icons'>local_offer</i> Category
+				</a>
+				<ul id='category-toggle' class='dropdown-content'>
+					<li><a href='#'>@UAT</a></li>
+					<li><a href='#'>@InvalidEndpoint</a></li>
+					<li><a href='#'>@PastConversionRates</a></li>
+					<li><a href='#'>@FutureConversionRates</a></li>
+					<li class='divider'></li>
+					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
+				</ul>
+			</div>
+			<!-- category toggle -->
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+				<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+				<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+<div id='test-view-charts' class='subview-full'>
+    <div id='charts-row' class='row nm-v nm-h'>
+        <div class='col s12 m4 l4 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Features</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='parent-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> feature(s) passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped
+                </div>
+            </div>
+        </div>
+        <div class='col s12 m4 l4 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Scenarios</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='child-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='87.5%'><span class='strong'>14</span> scenario(s) passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='12.5%'>2</span> scenario(s) failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+                </div>
+            </div>
+        </div>
+        <div class='col s12 m4 l4 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Steps</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='grandchild-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='92.857%'><span class='strong'>78</span> step(s) passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='2.381%'>2</span> scenario(s) failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='4.762%'>4</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='4.762%'>0</span> others
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="timeline-chart" class="row nm-v nm-h">
+        <div class="col s12 m12 l12 np-h">
+            <div class="card-panel">
+                <div class='left panel-name'>Timeline (seconds)</div>
+                <div class="chart-box" style="width:98%;max-height:145px;">
+                    <canvas id="timeline" height="120"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='test-collection' class='test-collection'>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>Get and validate conversion rates for past and future dates using Foreign Exchange Rates API</span>
+						<span class='test-time'>Jun 2, 2020 04:39:54 pm</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+<div class='test-desc'>Description: Validate that Foreign Exchange Rates API is fit for consumption for financial reasons</div>
+<div class='scenario outline node' test-id='2' status='pass'>
+	<div class='category-list'>
+		<span class='category label'>@UAT</span>
+	</div>
+	<span class='duration right label'>0h 0m 4s+474ms</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: Validate that API responds with correct status code when queried with different parameter combinations</div>
+		<table class='runtime-table table-striped table'><tr><td>EndPoint</td><td>QueryParam</td><td>BaseCurrency</td><td>StatusCode</td></tr><tr><td>latest</td><td>symbols</td><td>GBP</td><td>200</td></tr><tr><td>latest</td><td>symbols</td><td>USD,GBP</td><td>200</td></tr><tr><td>latest</td><td>base</td><td>GBP</td><td>200</td></tr></table>
+	</div>
+	<ul class='steps'>
+		<li test-id='3' class='node scenario pass' status='pass'>
+			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Validate that API responds with correct status code when queried with different parameter combinations</div>
+			<ul class='gc steps'>
+				<li test-id='5' class='gc given pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.isForeignExchangeAPIAccessible()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given Foreign Exchange Rates API is accessible</h6>
+					<div class="node-step">URI under testhttps://api.ratesapi.io/api/latest</div>
+					<div class="node-step">API is up and running</div>
+				</li>
+				<li test-id='6' class='gc when pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.api_is_hit_with_end_point_as(String,String,String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When API is hit with end point as "latest" "symbols" "GBP"</h6>
+					<div class="node-step">Hitting endpoint 'https://api.ratesapi.io/api/latest with symbols = GBP</div>
+					<div class="node-step">Response received : {"base":"EUR","rates":{"GBP":0.89673},"date":"2020-06-01"}</div>
+				</li>
+				<li test-id='7' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.api_Should_respond_with_status_code_as(int)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then API Should respond with status code as "200"</h6>
+					<div class="node-step">Actual status code : '200' matches with expected status code : '200'</div>
+				</li>
+				<li test-id='8' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.response_should_contain_not_null_values_for_Currencies(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Response should contain not null values for "GBP"</h6>
+					<div class="node-step">Response currency : 'GBP' , returned a valid actual value '0.89673'</div>
+				</li>
+			</ul>
+		</li>
+		<li test-id='9' class='node scenario pass' status='pass'>
+			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Validate that API responds with correct status code when queried with different parameter combinations</div>
+			<ul class='gc steps'>
+				<li test-id='11' class='gc given pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.isForeignExchangeAPIAccessible()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given Foreign Exchange Rates API is accessible</h6>
+					<div class="node-step">URI under testhttps://api.ratesapi.io/api/latest</div>
+					<div class="node-step">API is up and running</div>
+				</li>
+				<li test-id='12' class='gc when pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.api_is_hit_with_end_point_as(String,String,String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When API is hit with end point as "latest" "symbols" "USD,GBP"</h6>
+					<div class="node-step">Hitting endpoint 'https://api.ratesapi.io/api/latest with symbols = USD,GBP</div>
+					<div class="node-step">Response received : {"base":"EUR","rates":{"USD":1.1116,"GBP":0.89673},"date":"2020-06-01"}</div>
+				</li>
+				<li test-id='13' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.api_Should_respond_with_status_code_as(int)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then API Should respond with status code as "200"</h6>
+					<div class="node-step">Actual status code : '200' matches with expected status code : '200'</div>
+				</li>
+				<li test-id='14' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.response_should_contain_not_null_values_for_Currencies(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Response should contain not null values for "USD,GBP"</h6>
+					<div class="node-step">Response currency : 'USD' , returned a valid actual value '1.1116'</div>
+					<div class="node-step">Response currency : 'GBP' , returned a valid actual value '0.89673'</div>
+				</li>
+			</ul>
+		</li>
+		<li test-id='15' class='node scenario pass' status='pass'>
+			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Validate that API responds with correct status code when queried with different parameter combinations</div>
+			<ul class='gc steps'>
+				<li test-id='17' class='gc given pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.isForeignExchangeAPIAccessible()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given Foreign Exchange Rates API is accessible</h6>
+					<div class="node-step">URI under testhttps://api.ratesapi.io/api/latest</div>
+					<div class="node-step">API is up and running</div>
+				</li>
+				<li test-id='18' class='gc when pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.api_is_hit_with_end_point_as(String,String,String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When API is hit with end point as "latest" "base" "GBP"</h6>
+					<div class="node-step">Hitting endpoint 'https://api.ratesapi.io/api/latest with base = GBP</div>
+					<div class="node-step">Response received : {"base":"GBP","rates":{"GBP":1.0,"HKD":9.6088008654,"IDR":18110.7802794598,"ILS":4.343224828,"DKK":8.3134276761,"INR":93.6045409432,"CHF":1.1916630424,"MXN":27.2679624859,"CZK":29.9521595129,"SGD":1.7473487003,"THB":39.2581936592,"HRK":8.4635285984,"EUR":1.1151628695,"MYR":5.3532278389,"NOK":12.0314921994,"CNY":8.8462524952,"BGN":2.1810355402,"PHP":62.390017062,"PLN":4.9377181537,"ZAR":21.633379055,"CAD":1.6981700177,"ISK":168.3895933001,"BRL":6.6102394255,"RON":5.4015143912,"NZD":1.9876662987,"TRY":8.4465781227,"JPY":133.5407536271,"RUB":86.3557592586,"KRW":1521.5728257112,"USD":1.2396150458,"AUD":1.8386805393,"HUF":385.2330132816,"SEK":11.6685066854},"date":"2020-06-01"}</div>
+				</li>
+				<li test-id='19' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.api_Should_respond_with_status_code_as(int)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then API Should respond with status code as "200"</h6>
+					<div class="node-step">Actual status code : '200' matches with expected status code : '200'</div>
+				</li>
+				<li test-id='20' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.response_should_contain_not_null_values_for_Currencies(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Response should contain not null values for "GBP"</h6>
+					<div class="node-step">Response currency : 'GBP' , returned a valid actual value '1.0'</div>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+<div class='scenario outline node' test-id='21' status='pass'>
+	<div class='category-list'>
+		<span class='category label'>@UAT</span>
+	</div>
+	<span class='duration right label'>0h 0m 4s+541ms</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: Confirm that API responds with correct base value for currency based on input</div>
+		<table class='runtime-table table-striped table'><tr><td>EndPoint</td><td>QueryParam</td><td>BaseCurrency</td><td>CheckCurrencies</td></tr><tr><td>latest</td><td>base</td><td>GBP</td><td>INR,AUD</td></tr><tr><td>latest</td><td>base</td><td>INR</td><td>PHP,AUD</td></tr><tr><td>latest</td><td>base</td><td>AUD</td><td>INR,USD</td></tr><tr><td>latest</td><td>base</td><td>HKD</td><td>INR,AUD</td></tr><tr><td>latest</td><td>base</td><td>NZD</td><td>INR,AUD</td></tr></table>
+	</div>
+	<ul class='steps'>
+		<li test-id='22' class='node scenario pass' status='pass'>
+			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Confirm that API responds with correct base value for currency based on input</div>
+			<ul class='gc steps'>
+				<li test-id='24' class='gc given pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.isForeignExchangeAPIAccessible()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given Foreign Exchange Rates API is accessible</h6>
+					<div class="node-step">URI under testhttps://api.ratesapi.io/api/latest</div>
+					<div class="node-step">API is up and running</div>
+				</li>
+				<li test-id='25' class='gc when pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.api_is_hit_with_end_point_as(String,String,String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When API is hit with end point as "latest" "base" "GBP"</h6>
+					<div class="node-step">Hitting endpoint 'https://api.ratesapi.io/api/latest with base = GBP</div>
+					<div class="node-step">Response received : {"base":"GBP","rates":{"GBP":1.0,"HKD":9.6088008654,"IDR":18110.7802794598,"ILS":4.343224828,"DKK":8.3134276761,"INR":93.6045409432,"CHF":1.1916630424,"MXN":27.2679624859,"CZK":29.9521595129,"SGD":1.7473487003,"THB":39.2581936592,"HRK":8.4635285984,"EUR":1.1151628695,"MYR":5.3532278389,"NOK":12.0314921994,"CNY":8.8462524952,"BGN":2.1810355402,"PHP":62.390017062,"PLN":4.9377181537,"ZAR":21.633379055,"CAD":1.6981700177,"ISK":168.3895933001,"BRL":6.6102394255,"RON":5.4015143912,"NZD":1.9876662987,"TRY":8.4465781227,"JPY":133.5407536271,"RUB":86.3557592586,"KRW":1521.5728257112,"USD":1.2396150458,"AUD":1.8386805393,"HUF":385.2330132816,"SEK":11.6685066854},"date":"2020-06-01"}</div>
+				</li>
+				<li test-id='26' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.api_Should_respond_with_status_code_as(int)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then API Should respond with status code as "200"</h6>
+					<div class="node-step">Actual status code : '200' matches with expected status code : '200'</div>
+				</li>
+				<li test-id='27' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.response_should_contain_base_currency_as(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Response should contain base currency as "GBP"</h6>
+					<div class="node-step">Actual status code : '200' matches with expected status code : '200'</div>
+					<div class="node-step">Actual response base currency : 'GBP' matches with expected base currency : 'GBP'</div>
+				</li>
+				<li test-id='28' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.Response_should_contain_value(String,String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Response should contain value "1.0" for "GBP"</h6>
+					<div class="node-step">Field : 'GBP' , Actual value '1.0' matches with Expected value '1.0</div>
+				</li>
+				<li test-id='29' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.response_should_contain_not_null_values_for_Currencies(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Response should contain not null values for "INR,AUD"</h6>
+					<div class="node-step">Response currency : 'INR' , returned a valid actual value '93.60454'</div>
+					<div class="node-step">Response currency : 'AUD' , returned a valid actual value '1.8386805'</div>
+				</li>
+			</ul>
+		</li>
+		<li test-id='30' class='node scenario pass' status='pass'>
+			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Confirm that API responds with correct base value for currency based on input</div>
+			<ul class='gc steps'>
+				<li test-id='32' class='gc given pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.isForeignExchangeAPIAccessible()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given Foreign Exchange Rates API is accessible</h6>
+					<div class="node-step">URI under testhttps://api.ratesapi.io/api/latest</div>
+					<div class="node-step">API is up and running</div>
+				</li>
+				<li test-id='33' class='gc when pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.api_is_hit_with_end_point_as(String,String,String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When API is hit with end point as "latest" "base" "INR"</h6>
+					<div class="node-step">Hitting endpoint 'https://api.ratesapi.io/api/latest with base = INR</div>
+					<div class="node-step">Response received : {"base":"INR","rates":{"GBP":0.0106832424,"HKD":0.1026531488,"IDR":193.4818556554,"ILS":0.0463997236,"DKK":0.088814363,"INR":1.0,"CHF":0.0127308251,"MXN":0.2913102528,"CZK":0.3199861803,"SGD":0.0186673497,"THB":0.4194047988,"HRK":0.0904179275,"EUR":0.0119135552,"MYR":0.0571898306,"NOK":0.1285353475,"CNY":0.0945066597,"BGN":0.0233005313,"PHP":0.6665276752,"PLN":0.0527508399,"ZAR":0.2311146322,"CAD":0.0181419619,"ISK":1.7989468417,"BRL":0.0706187901,"RON":0.0577056875,"NZD":0.0212347209,"TRY":0.0902368415,"JPY":1.4266482404,"RUB":0.9225595082,"KRW":16.255331316,"USD":0.013243108,"AUD":0.0196430699,"HUF":4.1155376587,"SEK":0.1246574853},"date":"2020-06-01"}</div>
+				</li>
+				<li test-id='34' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.api_Should_respond_with_status_code_as(int)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then API Should respond with status code as "200"</h6>
+					<div class="node-step">Actual status code : '200' matches with expected status code : '200'</div>
+				</li>
+				<li test-id='35' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.response_should_contain_base_currency_as(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Response should contain base currency as "INR"</h6>
+					<div class="node-step">Actual status code : '200' matches with expected status code : '200'</div>
+					<div class="node-step">Actual response base currency : 'INR' matches with expected base currency : 'INR'</div>
+				</li>
+				<li test-id='36' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.Response_should_contain_value(String,String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Response should contain value "1.0" for "INR"</h6>
+					<div class="node-step">Field : 'INR' , Actual value '1.0' matches with Expected value '1.0</div>
+				</li>
+				<li test-id='37' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.response_should_contain_not_null_values_for_Currencies(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Response should contain not null values for "PHP,AUD"</h6>
+					<div class="node-step">Response currency : 'PHP' , returned a valid actual value '0.6665277'</div>
+					<div class="node-step">Response currency : 'AUD' , returned a valid actual value '0.01964307'</div>
+				</li>
+			</ul>
+		</li>
+		<li test-id='38' class='node scenario pass' status='pass'>
+			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Confirm that API responds with correct base value for currency based on input</div>
+			<ul class='gc steps'>
+				<li test-id='40' class='gc given pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.isForeignExchangeAPIAccessible()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given Foreign Exchange Rates API is accessible</h6>
+					<div class="node-step">URI under testhttps://api.ratesapi.io/api/latest</div>
+					<div class="node-step">API is up and running</div>
+				</li>
+				<li test-id='41' class='gc when pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.api_is_hit_with_end_point_as(String,String,String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When API is hit with end point as "latest" "base" "AUD"</h6>
+					<div class="node-step">Hitting endpoint 'https://api.ratesapi.io/api/latest with base = AUD</div>
+					<div class="node-step">Response received : {"base":"AUD","rates":{"GBP":0.5438682678,"HKD":5.2259218826,"IDR":9849.8786996604,"ILS":2.362142164,"DKK":4.5214095099,"INR":50.9085395439,"CHF":0.6481077147,"MXN":14.8301795245,"CZK":16.2900291121,"SGD":0.9503275109,"THB":21.3512857836,"HRK":4.6030446385,"EUR":0.6065016982,"MYR":2.9114507521,"NOK":6.5435468219,"CNY":4.8111960213,"BGN":1.1861960213,"PHP":33.9319505095,"PLN":2.6854682193,"ZAR":11.765708394,"CAD":0.923580786,"ISK":91.5817564289,"BRL":3.5950994663,"RON":2.9377122756,"NZD":1.0810286269,"TRY":4.5938258127,"JPY":72.62857836,"RUB":46.9661572052,"KRW":827.5351770985,"USD":0.6741872877,"AUD":1.0,"HUF":209.5160116448,"SEK":6.3461305192},"date":"2020-06-01"}</div>
+				</li>
+				<li test-id='42' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.api_Should_respond_with_status_code_as(int)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then API Should respond with status code as "200"</h6>
+					<div class="node-step">Actual status code : '200' matches with expected status code : '200'</div>
+				</li>
+				<li test-id='43' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.response_should_contain_base_currency_as(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Response should contain base currency as "AUD"</h6>
+					<div class="node-step">Actual status code : '200' matches with expected status code : '200'</div>
+					<div class="node-step">Actual response base currency : 'AUD' matches with expected base currency : 'AUD'</div>
+				</li>
+				<li test-id='44' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.Response_should_contain_value(String,String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Response should contain value "1.0" for "AUD"</h6>
+					<div class="node-step">Field : 'AUD' , Actual value '1.0' matches with Expected value '1.0</div>
+				</li>
+				<li test-id='45' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.response_should_contain_not_null_values_for_Currencies(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Response should contain not null values for "INR,USD"</h6>
+					<div class="node-step">Response currency : 'INR' , returned a valid actual value '50.90854'</div>
+					<div class="node-step">Response currency : 'USD' , returned a valid actual value '0.6741873'</div>
+				</li>
+			</ul>
+		</li>
+		<li test-id='46' class='node scenario pass' status='pass'>
+			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Confirm that API responds with correct base value for currency based on input</div>
+			<ul class='gc steps'>
+				<li test-id='48' class='gc given pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.isForeignExchangeAPIAccessible()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given Foreign Exchange Rates API is accessible</h6>
+					<div class="node-step">URI under testhttps://api.ratesapi.io/api/latest</div>
+					<div class="node-step">API is up and running</div>
+				</li>
+				<li test-id='49' class='gc when pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.api_is_hit_with_end_point_as(String,String,String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When API is hit with end point as "latest" "base" "HKD"</h6>
+					<div class="node-step">Hitting endpoint 'https://api.ratesapi.io/api/latest with base = HKD</div>
+					<div class="node-step">Response received : {"base":"HKD","rates":{"GBP":0.1040712586,"HKD":1.0,"IDR":1884.8116984855,"ILS":0.4520048744,"DKK":0.8651888818,"INR":9.7415423896,"CHF":0.1240178727,"MXN":2.8378111762,"CZK":3.1171589392,"SGD":0.1818487785,"THB":4.0856496257,"HRK":0.8808100737,"EUR":0.1160564034,"MYR":0.5571171589,"NOK":1.2521325364,"CNY":0.9206406313,"BGN":0.2269831138,"PHP":6.4930076017,"PLN":0.513874543,"ZAR":2.2514129867,"CAD":0.1767306911,"ISK":17.5245169152,"BRL":0.6879359369,"RON":0.5621424012,"NZD":0.2068589334,"TRY":0.8790460164,"JPY":13.8977543086,"RUB":8.9871525561,"KRW":158.3519990715,"USD":0.129008298,"AUD":0.1913537979,"HUF":40.0916845587,"SEK":1.2143561771},"date":"2020-06-01"}</div>
+				</li>
+				<li test-id='50' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.api_Should_respond_with_status_code_as(int)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then API Should respond with status code as "200"</h6>
+					<div class="node-step">Actual status code : '200' matches with expected status code : '200'</div>
+				</li>
+				<li test-id='51' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.response_should_contain_base_currency_as(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Response should contain base currency as "HKD"</h6>
+					<div class="node-step">Actual status code : '200' matches with expected status code : '200'</div>
+					<div class="node-step">Actual response base currency : 'HKD' matches with expected base currency : 'HKD'</div>
+				</li>
+				<li test-id='52' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.Response_should_contain_value(String,String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Response should contain value "1.0" for "HKD"</h6>
+					<div class="node-step">Field : 'HKD' , Actual value '1.0' matches with Expected value '1.0</div>
+				</li>
+				<li test-id='53' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.response_should_contain_not_null_values_for_Currencies(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Response should contain not null values for "INR,AUD"</h6>
+					<div class="node-step">Response currency : 'INR' , returned a valid actual value '9.741543'</div>
+					<div class="node-step">Response currency : 'AUD' , returned a valid actual value '0.1913538'</div>
+				</li>
+			</ul>
+		</li>
+		<li test-id='54' class='node scenario pass' status='pass'>
+			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Confirm that API responds with correct base value for currency based on input</div>
+			<ul class='gc steps'>
+				<li test-id='56' class='gc given pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.isForeignExchangeAPIAccessible()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given Foreign Exchange Rates API is accessible</h6>
+					<div class="node-step">URI under testhttps://api.ratesapi.io/api/latest</div>
+					<div class="node-step">API is up and running</div>
+				</li>
+				<li test-id='57' class='gc when pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.api_is_hit_with_end_point_as(String,String,String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When API is hit with end point as "latest" "base" "NZD"</h6>
+					<div class="node-step">Hitting endpoint 'https://api.ratesapi.io/api/latest with base = NZD</div>
+					<div class="node-step">Response received : {"base":"NZD","rates":{"GBP":0.5031025583,"HKD":4.834212298,"IDR":9111.5798922801,"ILS":2.1850875224,"DKK":4.1825067325,"INR":47.0926840215,"CHF":0.5995287253,"MXN":13.7185816876,"CZK":15.069008079,"SGD":0.8790956014,"THB":19.7508976661,"HRK":4.2580228905,"EUR":0.5610412926,"MYR":2.6932226212,"NOK":6.0530745063,"CNY":4.4505722621,"BGN":1.0972845601,"PHP":31.3885771993,"PLN":2.4841786355,"ZAR":10.8838083483,"CAD":0.8543536804,"ISK":84.7172351885,"BRL":3.3256283662,"RON":2.7175157092,"NZD":1.0,"TRY":4.2494950628,"JPY":67.1846947935,"RUB":43.4458034111,"KRW":765.5071813285,"USD":0.6236535009,"AUD":0.9250448833,"HUF":193.8117145422,"SEK":5.8704555655},"date":"2020-06-01"}</div>
+				</li>
+				<li test-id='58' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.api_Should_respond_with_status_code_as(int)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then API Should respond with status code as "200"</h6>
+					<div class="node-step">Actual status code : '200' matches with expected status code : '200'</div>
+				</li>
+				<li test-id='59' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.response_should_contain_base_currency_as(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Response should contain base currency as "NZD"</h6>
+					<div class="node-step">Actual status code : '200' matches with expected status code : '200'</div>
+					<div class="node-step">Actual response base currency : 'NZD' matches with expected base currency : 'NZD'</div>
+				</li>
+				<li test-id='60' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.Response_should_contain_value(String,String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Response should contain value "1.0" for "NZD"</h6>
+					<div class="node-step">Field : 'NZD' , Actual value '1.0' matches with Expected value '1.0</div>
+				</li>
+				<li test-id='61' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.response_should_contain_not_null_values_for_Currencies(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Response should contain not null values for "INR,AUD"</h6>
+					<div class="node-step">Response currency : 'INR' , returned a valid actual value '47.092686'</div>
+					<div class="node-step">Response currency : 'AUD' , returned a valid actual value '0.9250449'</div>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+<div class='scenario outline node' test-id='62' status='pass'>
+	<div class='category-list'>
+		<span class='category label'>@InvalidEndpoint</span>
+		<span class='category label'>@UAT</span>
+	</div>
+	<span class='duration right label'>0h 0m 3s+894ms</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: Validate results when incorrect/invalid endpoint is invoked</div>
+		<table class='runtime-table table-striped table'><tr><td>EndPoint</td><td>StatusCode</td><td>ErrorMessage</td></tr><tr><td>BKG</td><td>400</td><td>Base 'BKG' is not supported.</td></tr><tr><td>123</td><td>400</td><td>Base '123' is not supported.</td></tr><tr><td>@#$</td><td>400</td><td>Base '@#$' is not supported.</td></tr></table>
+	</div>
+	<ul class='steps'>
+		<li test-id='63' class='node scenario pass' status='pass'>
+			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Validate results when incorrect/invalid endpoint is invoked</div>
+			<ul class='gc steps'>
+				<li test-id='65' class='gc given pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.isForeignExchangeAPIAccessible()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given Foreign Exchange Rates API is accessible</h6>
+					<div class="node-step">URI under testhttps://api.ratesapi.io/api/latest</div>
+					<div class="node-step">API is up and running</div>
+				</li>
+				<li test-id='66' class='gc when pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.api_is_hit_with_end_point_as(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When API is hit with end point as ?base="BKG"</h6>
+					<div class="node-step">Hitting endpoint 'https://api.ratesapi.io/api/latest with base = BKG</div>
+					<div class="node-step">Response received : {"error":"Base 'BKG' is not supported."}</div>
+				</li>
+				<li test-id='67' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.api_Should_respond_with_status_code_as(int)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then API Should respond with status code as "400"</h6>
+					<div class="node-step">Actual status code : '400' matches with expected status code : '400'</div>
+				</li>
+				<li test-id='68' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.error_message_should_be_displayed_as(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Error message should be displayed as "Base 'BKG' is not supported."</h6>
+					<div class="node-step">Expected error message received : '{"error":"Base 'BKG' is not supported."}'</div>
+				</li>
+			</ul>
+		</li>
+		<li test-id='69' class='node scenario pass' status='pass'>
+			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Validate results when incorrect/invalid endpoint is invoked</div>
+			<ul class='gc steps'>
+				<li test-id='71' class='gc given pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.isForeignExchangeAPIAccessible()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given Foreign Exchange Rates API is accessible</h6>
+					<div class="node-step">URI under testhttps://api.ratesapi.io/api/latest</div>
+					<div class="node-step">API is up and running</div>
+				</li>
+				<li test-id='72' class='gc when pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.api_is_hit_with_end_point_as(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When API is hit with end point as ?base="123"</h6>
+					<div class="node-step">Hitting endpoint 'https://api.ratesapi.io/api/latest with base = 123</div>
+					<div class="node-step">Response received : {"error":"Base '123' is not supported."}</div>
+				</li>
+				<li test-id='73' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.api_Should_respond_with_status_code_as(int)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then API Should respond with status code as "400"</h6>
+					<div class="node-step">Actual status code : '400' matches with expected status code : '400'</div>
+				</li>
+				<li test-id='74' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.error_message_should_be_displayed_as(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Error message should be displayed as "Base '123' is not supported."</h6>
+					<div class="node-step">Expected error message received : '{"error":"Base '123' is not supported."}'</div>
+				</li>
+			</ul>
+		</li>
+		<li test-id='75' class='node scenario pass' status='pass'>
+			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Validate results when incorrect/invalid endpoint is invoked</div>
+			<ul class='gc steps'>
+				<li test-id='77' class='gc given pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.isForeignExchangeAPIAccessible()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given Foreign Exchange Rates API is accessible</h6>
+					<div class="node-step">URI under testhttps://api.ratesapi.io/api/latest</div>
+					<div class="node-step">API is up and running</div>
+				</li>
+				<li test-id='78' class='gc when pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.api_is_hit_with_end_point_as(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When API is hit with end point as ?base="@#$"</h6>
+					<div class="node-step">Hitting endpoint 'https://api.ratesapi.io/api/latest with base = @#$</div>
+					<div class="node-step">Response received : {"error":"Base '@#$' is not supported."}</div>
+				</li>
+				<li test-id='79' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.api_Should_respond_with_status_code_as(int)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then API Should respond with status code as "400"</h6>
+					<div class="node-step">Actual status code : '400' matches with expected status code : '400'</div>
+				</li>
+				<li test-id='80' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.error_message_should_be_displayed_as(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Error message should be displayed as "Base '@#$' is not supported."</h6>
+					<div class="node-step">Expected error message received : '{"error":"Base '@#$' is not supported."}'</div>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+<div class='scenario outline node' test-id='81' status='pass'>
+	<div class='category-list'>
+		<span class='category label'>@PastConversionRates</span>
+		<span class='category label'>@UAT</span>
+	</div>
+	<span class='duration right label'>0h 0m 2s+728ms</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: Validate that API returns data for specific past date</div>
+		<table class='runtime-table table-striped table'><tr><td>EndPoint</td><td>QueryParam</td><td>BaseCurrency</td><td>ResponseDate</td><td>CheckCurrencies</td></tr><tr><td>2020-06-01</td><td>base</td><td>INR</td><td>2020-06-01</td><td>AUD,GBP</td></tr><tr><td>2020-05-31</td><td>base</td><td>USD</td><td>2020-05-31</td><td>NZD,INR</td></tr><tr><td>2019-12-31</td><td>base</td><td>USD</td><td>2019-12-31</td><td>NZD,INR</td></tr></table>
+	</div>
+	<ul class='steps'>
+		<li test-id='82' class='node scenario pass' status='pass'>
+			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Validate that API returns data for specific past date</div>
+			<ul class='gc steps'>
+				<li test-id='84' class='gc given pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.isForeignExchangeAPIAccessible()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given Foreign Exchange Rates API is accessible</h6>
+					<div class="node-step">URI under testhttps://api.ratesapi.io/api/latest</div>
+					<div class="node-step">API is up and running</div>
+				</li>
+				<li test-id='85' class='gc when pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.api_is_hit_with_end_point_as(String,String,String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When API is hit with end point as "2020-06-01" "base" "INR"</h6>
+					<div class="node-step">Hitting endpoint 'https://api.ratesapi.io/api/ with base = INR</div>
+					<div class="node-step">Response received : {"base":"INR","rates":{"GBP":0.0106832424,"HKD":0.1026531488,"IDR":193.4818556554,"ILS":0.0463997236,"DKK":0.088814363,"INR":1.0,"CHF":0.0127308251,"MXN":0.2913102528,"CZK":0.3199861803,"SGD":0.0186673497,"THB":0.4194047988,"HRK":0.0904179275,"EUR":0.0119135552,"MYR":0.0571898306,"NOK":0.1285353475,"CNY":0.0945066597,"BGN":0.0233005313,"PHP":0.6665276752,"PLN":0.0527508399,"ZAR":0.2311146322,"CAD":0.0181419619,"ISK":1.7989468417,"BRL":0.0706187901,"RON":0.0577056875,"NZD":0.0212347209,"TRY":0.0902368415,"JPY":1.4266482404,"RUB":0.9225595082,"KRW":16.255331316,"USD":0.013243108,"AUD":0.0196430699,"HUF":4.1155376587,"SEK":0.1246574853},"date":"2020-06-01"}</div>
+				</li>
+				<li test-id='86' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.api_Should_respond_with_status_code_as(int)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then API Should respond with status code as "200"</h6>
+					<div class="node-step">Actual status code : '200' matches with expected status code : '200'</div>
+				</li>
+				<li test-id='87' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.Response_should_contain_expected_date(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Response should contain date as "2020-06-01"</h6>
+					<div class="node-step">Expected Date 2020-06-01 matches with actual response date 2020-06-01</div>
+				</li>
+				<li test-id='88' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.response_should_contain_not_null_values_for_Currencies(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Response should contain not null values for "AUD,GBP"</h6>
+					<div class="node-step">Response currency : 'AUD' , returned a valid actual value '0.01964307'</div>
+					<div class="node-step">Response currency : 'GBP' , returned a valid actual value '0.010683242'</div>
+				</li>
+				<li test-id='89' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.response_should_contain_base_currency_as(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Response should contain base currency as "INR"</h6>
+					<div class="node-step">Actual status code : '200' matches with expected status code : '200'</div>
+					<div class="node-step">Actual response base currency : 'INR' matches with expected base currency : 'INR'</div>
+				</li>
+			</ul>
+		</li>
+		<li test-id='90' class='node scenario pass' status='pass'>
+			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Validate that API returns data for specific past date</div>
+			<ul class='gc steps'>
+				<li test-id='92' class='gc given pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.isForeignExchangeAPIAccessible()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given Foreign Exchange Rates API is accessible</h6>
+					<div class="node-step">URI under testhttps://api.ratesapi.io/api/latest</div>
+					<div class="node-step">API is up and running</div>
+				</li>
+				<li test-id='93' class='gc when pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.api_is_hit_with_end_point_as(String,String,String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When API is hit with end point as "2020-05-31" "base" "USD"</h6>
+					<div class="node-step">Hitting endpoint 'https://api.ratesapi.io/api/ with base = USD</div>
+					<div class="node-step">Response received : {"base":"USD","rates":{"GBP":0.8089798851,"HKD":7.7538613506,"IDR":14610.003591954,"ILS":3.5079920977,"DKK":6.6937859195,"INR":75.5230783046,"CHF":0.9626436782,"MXN":22.0635775862,"CZK":24.1747485632,"SGD":1.4109195402,"THB":31.8103448276,"HRK":6.8130387931,"EUR":0.8979885057,"MYR":4.3475215517,"NOK":9.6875,"CNY":7.1350574713,"BGN":1.7562859195,"PHP":50.4947916667,"PLN":3.9955998563,"ZAR":17.4424389368,"CAD":1.3721264368,"ISK":135.4166666667,"BRL":5.3568606322,"RON":4.3546156609,"NZD":1.6040768678,"TRY":6.8337823276,"JPY":107.1210488506,"RUB":70.4396551724,"KRW":1235.8207614943,"USD":1.0,"AUD":1.4979346264,"HUF":313.1555316092,"SEK":9.4172054598},"date":"2020-05-29"}</div>
+				</li>
+				<li test-id='94' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.api_Should_respond_with_status_code_as(int)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then API Should respond with status code as "200"</h6>
+					<div class="node-step">Actual status code : '200' matches with expected status code : '200'</div>
+				</li>
+				<li test-id='95' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.Response_should_contain_expected_date(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Response should contain date as "2020-05-31"</h6>
+					<div class="node-step">Expected Date 2020-05-29 matches with actual response date 2020-05-29</div>
+				</li>
+				<li test-id='96' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.response_should_contain_not_null_values_for_Currencies(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Response should contain not null values for "NZD,INR"</h6>
+					<div class="node-step">Response currency : 'NZD' , returned a valid actual value '1.6040769'</div>
+					<div class="node-step">Response currency : 'INR' , returned a valid actual value '75.52308'</div>
+				</li>
+				<li test-id='97' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.response_should_contain_base_currency_as(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Response should contain base currency as "USD"</h6>
+					<div class="node-step">Actual status code : '200' matches with expected status code : '200'</div>
+					<div class="node-step">Actual response base currency : 'USD' matches with expected base currency : 'USD'</div>
+				</li>
+			</ul>
+		</li>
+		<li test-id='98' class='node scenario pass' status='pass'>
+			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Validate that API returns data for specific past date</div>
+			<ul class='gc steps'>
+				<li test-id='100' class='gc given pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.isForeignExchangeAPIAccessible()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given Foreign Exchange Rates API is accessible</h6>
+					<div class="node-step">URI under testhttps://api.ratesapi.io/api/latest</div>
+					<div class="node-step">API is up and running</div>
+				</li>
+				<li test-id='101' class='gc when pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.api_is_hit_with_end_point_as(String,String,String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When API is hit with end point as "2019-12-31" "base" "USD"</h6>
+					<div class="node-step">Hitting endpoint 'https://api.ratesapi.io/api/ with base = USD</div>
+					<div class="node-step">Response received : {"base":"USD","rates":{"GBP":0.7573437778,"HKD":7.7864518426,"IDR":13882.4995549226,"ILS":3.4578066584,"DKK":6.6507922378,"INR":71.3788499199,"CHF":0.9661741143,"MXN":18.8892647321,"CZK":22.6170553676,"SGD":1.3451130497,"THB":29.7445255474,"HRK":6.6223072815,"EUR":0.890154887,"MYR":4.090528752,"NOK":8.7803097739,"CNY":6.9614562934,"BGN":1.7409649279,"PHP":50.6498130675,"PLN":3.7892113228,"ZAR":14.0442406979,"CAD":1.299448104,"ISK":120.8830336479,"BRL":4.019672423,"RON":4.2576108243,"NZD":1.4823749332,"TRY":5.9500623108,"JPY":108.5454869147,"RUB":62.271942318,"KRW":1153.889976856,"USD":1.0,"AUD":1.4238027417,"HUF":294.2228947837,"SEK":9.299270073},"date":"2019-12-31"}</div>
+				</li>
+				<li test-id='102' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.api_Should_respond_with_status_code_as(int)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then API Should respond with status code as "200"</h6>
+					<div class="node-step">Actual status code : '200' matches with expected status code : '200'</div>
+				</li>
+				<li test-id='103' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.Response_should_contain_expected_date(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Response should contain date as "2019-12-31"</h6>
+					<div class="node-step">Expected Date 2019-12-31 matches with actual response date 2019-12-31</div>
+				</li>
+				<li test-id='104' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.response_should_contain_not_null_values_for_Currencies(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Response should contain not null values for "NZD,INR"</h6>
+					<div class="node-step">Response currency : 'NZD' , returned a valid actual value '1.4823749'</div>
+					<div class="node-step">Response currency : 'INR' , returned a valid actual value '71.37885'</div>
+				</li>
+				<li test-id='105' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.response_should_contain_base_currency_as(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Response should contain base currency as "USD"</h6>
+					<div class="node-step">Actual status code : '200' matches with expected status code : '200'</div>
+					<div class="node-step">Actual response base currency : 'USD' matches with expected base currency : 'USD'</div>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+<div class='scenario outline node' test-id='106' status='fail'>
+	<div class='category-list'>
+		<span class='category label'>@FutureConversionRates</span>
+		<span class='category label'>@UAT</span>
+	</div>
+	<span class='duration right label'>0h 0m 1s+761ms</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span> Scenario Outline: Validate that API returns data for today when queried for a future date</div>
+		<table class='runtime-table table-striped table'><tr><td>EndPoint</td><td>QueryParam</td><td>BaseCurrency</td><td>ResponseDate</td><td>CheckCurrencies</td></tr><tr><td>2020-06-03</td><td>base</td><td>EUR</td><td>Today</td><td>NZD,INR</td></tr><tr><td>2020-12-31</td><td>base</td><td>EUR</td><td>Today</td><td>NZD,INR</td></tr></table>
+	</div>
+	<ul class='steps'>
+		<li test-id='107' class='node scenario fail' status='fail'>
+			<div class="step-name" title=""><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>Validate that API returns data for today when queried for a future date</div>
+			<ul class='gc steps'>
+				<li test-id='109' class='gc given pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.isForeignExchangeAPIAccessible()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given Foreign Exchange Rates API is accessible</h6>
+					<div class="node-step">URI under testhttps://api.ratesapi.io/api/latest</div>
+					<div class="node-step">API is up and running</div>
+				</li>
+				<li test-id='110' class='gc when pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.api_is_hit_with_end_point_as(String,String,String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When API is hit with end point as "2020-06-03" "base" "EUR"</h6>
+					<div class="node-step">Hitting endpoint 'https://api.ratesapi.io/api/ with base = EUR</div>
+					<div class="node-step">Response received : {"base":"EUR","rates":{"GBP":0.89673,"HKD":8.6165,"IDR":16240.48,"ILS":3.8947,"DKK":7.4549,"INR":83.938,"CHF":1.0686,"MXN":24.452,"CZK":26.859,"SGD":1.5669,"THB":35.204,"HRK":7.5895,"MYR":4.8004,"NOK":10.789,"CNY":7.9327,"BGN":1.9558,"PHP":55.947,"SEK":10.4635,"PLN":4.4278,"ZAR":19.3993,"CAD":1.5228,"ISK":151.0,"BRL":5.9276,"RON":4.8437,"NZD":1.7824,"TRY":7.5743,"JPY":119.75,"RUB":77.4378,"KRW":1364.44,"USD":1.1116,"HUF":345.45,"AUD":1.6488},"date":"2020-06-01"}</div>
+				</li>
+				<li test-id='111' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.api_Should_respond_with_status_code_as(int)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then API Should respond with status code as "200"</h6>
+					<div class="node-step">Actual status code : '200' matches with expected status code : '200'</div>
+				</li>
+				<li test-id='112' class='gc and fail' status='fail'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.Response_should_contain_expected_date(String)"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>And Response should contain date as "Today"</h6>
+					<textarea disabled class="code-block">org.junit.ComparisonFailure: expected:<2020-06-0[2]> but was:<2020-06-0[1]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at stepDefinitions.ConversionRatesAPISteps.Response_should_contain_expected_date(ConversionRatesAPISteps.java:183)
+	at ✽.Response should contain date as "Today"(file:src/test/resources/features/ConversionRates.feature:65)
+</textarea>
+				</li>
+				<li test-id='113' class='gc and skip' status='skip'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.response_for_future_date_should_match_with_response_for_today()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Response for future date should match with response for today</h6>
+					<div class="node-step">Step skipped</div>
+				</li>
+				<li test-id='114' class='gc and skip' status='skip'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.response_should_contain_not_null_values_for_Currencies(String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Response should contain not null values for "NZD,INR"</h6>
+					<div class="node-step">Step skipped</div>
+				</li>
+			</ul>
+		</li>
+		<li test-id='115' class='node scenario fail' status='fail'>
+			<div class="step-name" title=""><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>Validate that API returns data for today when queried for a future date</div>
+			<ul class='gc steps'>
+				<li test-id='117' class='gc given pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.isForeignExchangeAPIAccessible()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given Foreign Exchange Rates API is accessible</h6>
+					<div class="node-step">URI under testhttps://api.ratesapi.io/api/latest</div>
+					<div class="node-step">API is up and running</div>
+				</li>
+				<li test-id='118' class='gc when pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.api_is_hit_with_end_point_as(String,String,String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When API is hit with end point as "2020-12-31" "base" "EUR"</h6>
+					<div class="node-step">Hitting endpoint 'https://api.ratesapi.io/api/ with base = EUR</div>
+					<div class="node-step">Response received : {"base":"EUR","rates":{"GBP":0.89673,"HKD":8.6165,"IDR":16240.48,"ILS":3.8947,"DKK":7.4549,"INR":83.938,"CHF":1.0686,"MXN":24.452,"CZK":26.859,"SGD":1.5669,"THB":35.204,"HRK":7.5895,"MYR":4.8004,"NOK":10.789,"CNY":7.9327,"BGN":1.9558,"PHP":55.947,"SEK":10.4635,"PLN":4.4278,"ZAR":19.3993,"CAD":1.5228,"ISK":151.0,"BRL":5.9276,"RON":4.8437,"NZD":1.7824,"TRY":7.5743,"JPY":119.75,"RUB":77.4378,"KRW":1364.44,"USD":1.1116,"HUF":345.45,"AUD":1.6488},"date":"2020-06-01"}</div>
+				</li>
+				<li test-id='119' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.api_Should_respond_with_status_code_as(int)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then API Should respond with status code as "200"</h6>
+					<div class="node-step">Actual status code : '200' matches with expected status code : '200'</div>
+				</li>
+				<li test-id='120' class='gc and fail' status='fail'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.Response_should_contain_expected_date(String)"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>And Response should contain date as "Today"</h6>
+					<textarea disabled class="code-block">org.junit.ComparisonFailure: expected:<2020-06-0[2]> but was:<2020-06-0[1]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at stepDefinitions.ConversionRatesAPISteps.Response_should_contain_expected_date(ConversionRatesAPISteps.java:183)
+	at ✽.Response should contain date as "Today"(file:src/test/resources/features/ConversionRates.feature:65)
+</textarea>
+				</li>
+				<li test-id='121' class='gc and skip' status='skip'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.response_for_future_date_should_match_with_response_for_today()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Response for future date should match with response for today</h6>
+					<div class="node-step">Step skipped</div>
+				</li>
+				<li test-id='122' class='gc and skip' status='skip'>
+					<h6 class="step-name" title="ConversionRatesAPISteps.response_should_contain_not_null_values_for_Currencies(String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Response should contain not null values for "NZD,INR"</h6>
+					<div class="node-step">Step skipped</div>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<div id='step-filters' class="right sr-filters">
+				<a class="btn-floating waves-effect waves-light green" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></a>
+				<a class="btn-floating waves-effect waves-light red" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light red darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light pink text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></a>
+				<a class="btn-floating waves-effect waves-light orange" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></a>
+				<a class="btn-floating waves-effect waves-light teal" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></a>
+				<a class="btn-floating waves-effect waves-light grey" status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></a>
+			</div>
+			<h5 class='test-name'></h5>
+		</div>
+	</div>
+	<!-- subview right -->
+</div>
+<!-- test view --><div id='category-view' class='view hide'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='category-collection' class='category-collection'>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@UAT</span>
+						<span class='category-status right'>
+						<span class='label pass'>18</span>
+						<span class='label fail'>3</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 18</span>
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 3</span>
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jun 2, 2020 04:39:54 pm</td>
+										<td class='linked' test-id='2'>Validate that API responds with correct status code when queried with different parameter combinations</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jun 2, 2020 04:39:54 pm</td>
+										<td class='linked' test-id='3'>Validate that API responds with correct status code when queried with different parameter combinations</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jun 2, 2020 04:39:56 pm</td>
+										<td class='linked' test-id='9'>Validate that API responds with correct status code when queried with different parameter combinations</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jun 2, 2020 04:39:57 pm</td>
+										<td class='linked' test-id='15'>Validate that API responds with correct status code when queried with different parameter combinations</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jun 2, 2020 04:39:58 pm</td>
+										<td class='linked' test-id='21'>Confirm that API responds with correct base value for currency based on input</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jun 2, 2020 04:39:58 pm</td>
+										<td class='linked' test-id='22'>Confirm that API responds with correct base value for currency based on input</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jun 2, 2020 04:39:59 pm</td>
+										<td class='linked' test-id='30'>Confirm that API responds with correct base value for currency based on input</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jun 2, 2020 04:40:00 pm</td>
+										<td class='linked' test-id='38'>Confirm that API responds with correct base value for currency based on input</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jun 2, 2020 04:40:01 pm</td>
+										<td class='linked' test-id='46'>Confirm that API responds with correct base value for currency based on input</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jun 2, 2020 04:40:02 pm</td>
+										<td class='linked' test-id='54'>Confirm that API responds with correct base value for currency based on input</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jun 2, 2020 04:40:03 pm</td>
+										<td class='linked' test-id='62'>Validate results when incorrect/invalid endpoint is invoked</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jun 2, 2020 04:40:03 pm</td>
+										<td class='linked' test-id='63'>Validate results when incorrect/invalid endpoint is invoked</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jun 2, 2020 04:40:04 pm</td>
+										<td class='linked' test-id='69'>Validate results when incorrect/invalid endpoint is invoked</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jun 2, 2020 04:40:06 pm</td>
+										<td class='linked' test-id='75'>Validate results when incorrect/invalid endpoint is invoked</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jun 2, 2020 04:40:06 pm</td>
+										<td class='linked' test-id='81'>Validate that API returns data for specific past date</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jun 2, 2020 04:40:06 pm</td>
+										<td class='linked' test-id='82'>Validate that API returns data for specific past date</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jun 2, 2020 04:40:07 pm</td>
+										<td class='linked' test-id='90'>Validate that API returns data for specific past date</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jun 2, 2020 04:40:08 pm</td>
+										<td class='linked' test-id='98'>Validate that API returns data for specific past date</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jun 2, 2020 04:40:09 pm</td>
+										<td class='linked' test-id='106'>Validate that API returns data for today when queried for a future date</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Jun 2, 2020 04:40:09 pm</td>
+										<td class='linked' test-id='107'>Validate that API returns data for today when queried for a future date</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Jun 2, 2020 04:40:10 pm</td>
+										<td class='linked' test-id='115'>Validate that API returns data for today when queried for a future date</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@InvalidEndpoint</span>
+						<span class='category-status right'>
+						<span class='label pass'>4</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 4</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jun 2, 2020 04:40:03 pm</td>
+										<td class='linked' test-id='62'>Validate results when incorrect/invalid endpoint is invoked</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jun 2, 2020 04:40:03 pm</td>
+										<td class='linked' test-id='63'>Validate results when incorrect/invalid endpoint is invoked</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jun 2, 2020 04:40:04 pm</td>
+										<td class='linked' test-id='69'>Validate results when incorrect/invalid endpoint is invoked</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jun 2, 2020 04:40:06 pm</td>
+										<td class='linked' test-id='75'>Validate results when incorrect/invalid endpoint is invoked</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@PastConversionRates</span>
+						<span class='category-status right'>
+						<span class='label pass'>4</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 4</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jun 2, 2020 04:40:06 pm</td>
+										<td class='linked' test-id='81'>Validate that API returns data for specific past date</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jun 2, 2020 04:40:06 pm</td>
+										<td class='linked' test-id='82'>Validate that API returns data for specific past date</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jun 2, 2020 04:40:07 pm</td>
+										<td class='linked' test-id='90'>Validate that API returns data for specific past date</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jun 2, 2020 04:40:08 pm</td>
+										<td class='linked' test-id='98'>Validate that API returns data for specific past date</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@FutureConversionRates</span>
+						<span class='category-status right'>
+						<span class='label fail'>3</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 3</span>
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jun 2, 2020 04:40:09 pm</td>
+										<td class='linked' test-id='106'>Validate that API returns data for today when queried for a future date</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Jun 2, 2020 04:40:09 pm</td>
+										<td class='linked' test-id='107'>Validate that API returns data for today when queried for a future date</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Jun 2, 2020 04:40:10 pm</td>
+										<td class='linked' test-id='115'>Validate that API returns data for today when queried for a future date</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='category-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- category view --><div id='exception-view' class='view hide'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='exception-collection' class='exception-collection'>
+				<li class='exception displayed active'>
+					<div class='exception-heading'>
+						<span class='exception-name'>org.junit.ComparisonFailure</span>
+						<span class='exception-count right'><span class='label red lighten-1 white-text'>2</span></span>
+					</div>
+					<div class='exception-content hide'>
+						<div class='exception-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jun 2, 2020 04:40:10 pm</td>
+										<td class='linked' test-id='112'>And Response should contain date as "Today"</td>
+										<td>
+											<textarea disabled class="code-block">org.junit.ComparisonFailure: expected:<2020-06-0[2]> but was:<2020-06-0[1]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at stepDefinitions.ConversionRatesAPISteps.Response_should_contain_expected_date(ConversionRatesAPISteps.java:183)
+	at ✽.Response should contain date as "Today"(file:src/test/resources/features/ConversionRates.feature:65)
+</textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>Jun 2, 2020 04:40:11 pm</td>
+										<td class='linked' test-id='120'>And Response should contain date as "Today"</td>
+										<td>
+											<textarea disabled class="code-block">org.junit.ComparisonFailure: expected:<2020-06-0[2]> but was:<2020-06-0[1]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at stepDefinitions.ConversionRatesAPISteps.Response_should_contain_expected_date(ConversionRatesAPISteps.java:183)
+	at ✽.Response should contain date as "Today"(file:src/test/resources/features/ConversionRates.feature:65)
+</textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='exception-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- exception view --><div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Features
+					<div class='panel-lead'>1</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Scenarios
+					<div class='panel-lead'>16</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>84</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Jun 2, 2020 04:39:53 pm</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Jun 2, 2020 04:40:11 pm</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>0h 0m 17s+858ms</div>
+				</div>
+			</div>
+			<div class='col s6'>
+				<div class='card-panel dashboard-categories'>
+					<span class='right label cyan white-text'>Categories</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Passed</th>
+							<th>Failed</th>
+							<th>Skipped</th>
+							<th>Passed %</th>
+						</tr>
+						<tr>
+							<td>@UAT</td>
+							<td>18</td>
+							<td>3</td>
+							<td>0</td>
+							<td>
+									85.714%
+							</td>
+						</tr>
+						<tr>
+							<td>@InvalidEndpoint</td>
+							<td>4</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@PastConversionRates</td>
+							<td>4</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@FutureConversionRates</td>
+							<td>0</td>
+							<td>3</td>
+							<td>0</td>
+							<td>
+									0%
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->		</div>
+		<!-- container -->
+		<script>
+			var statusGroup = {
+                parentCount: 1,
+				passParent: 0,
+				failParent: 1,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 1,
+				childCount: 16,
+				passChild: 14,
+				failChild: 2,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 0,
+				debugChild: 0,
+				exceptionsChild: 2,
+				grandChildCount: 84,
+				passGrandChild: 78,
+				failGrandChild: 2,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 4,
+				infoGrandChild: 0,
+				debugGrandChild: 0,
+				exceptionsGrandChild: 6,
+			};
+		</script>
+		<script>
+			var timeline = {
+			        "Get and validate conversion rates for past and future dates using Foreign Exchange Rates API":17.414
+			};
+		</script>
+	
+		  <script src='https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ff53917fbbdb5ef820abbbe4d199a6942dc771ff/v3html/js/extent.js' type='text/javascript'></script>
+		<script type='text/javascript'>
+			
+      
+        $(document).ready(function() {
+
+        });
+      
+    
+		</script>
+	</body>
+</html>

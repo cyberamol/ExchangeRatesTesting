@@ -1,0 +1,72 @@
+Feature: Get and validate conversion rates for past and future dates using Foreign Exchange Rates API
+  Description: Validate that Foreign Exchange Rates API is fit for consumption for financial reasons
+
+  Background: 
+    Given Foreign Exchange Rates API is accessible
+
+  @UAT
+  Scenario Outline: Validate that API responds with correct status code when queried with different parameter combinations
+    When API is hit with end point as "<EndPoint>" "<QueryParam>" "<BaseCurrency>"
+    Then API Should respond with status code as "<StatusCode>"
+    And Response should contain not null values for "<BaseCurrency>"
+
+    Examples: 
+      | EndPoint | QueryParam | BaseCurrency | StatusCode |
+      | latest   | symbols    | GBP          |        200 |
+      | latest   | symbols    | USD,GBP      |        200 |
+      | latest   | base       | GBP          |        200 |
+
+  @UAT
+  Scenario Outline: Confirm that API responds with correct base value for currency based on input
+    When API is hit with end point as "<EndPoint>" "<QueryParam>" "<BaseCurrency>"
+    Then API Should respond with status code as "200"
+    And Response should contain base currency as "<BaseCurrency>"
+    And Response should contain value "1.0" for "<BaseCurrency>"
+    And Response should contain not null values for "<CheckCurrencies>"
+
+    Examples: 
+      | EndPoint | QueryParam | BaseCurrency | CheckCurrencies |
+      | latest   | base       | GBP          | INR,AUD         |
+      | latest   | base       | INR          | PHP,AUD         |
+      | latest   | base       | AUD          | INR,USD         |
+      | latest   | base       | HKD          | INR,AUD         |
+      | latest   | base       | NZD          | INR,AUD         |
+
+  @InvalidEndpoint @UAT
+  Scenario Outline: Validate results when incorrect/invalid endpoint is invoked
+    When API is hit with end point as ?base="<EndPoint>"
+    Then API Should respond with status code as "<StatusCode>"
+    And Error message should be displayed as "<ErrorMessage>"
+
+    Examples: 
+      | EndPoint | StatusCode | ErrorMessage                 |
+      | BKG      |        400 | Base 'BKG' is not supported. |
+      | 123      |        400 | Base '123' is not supported. |
+      | @#$      |        400 | Base '@#$' is not supported. |
+
+  @PastConversionRates @UAT
+  Scenario Outline: Validate that API returns data for specific past date
+    When API is hit with end point as "<EndPoint>" "<QueryParam>" "<BaseCurrency>"
+    Then API Should respond with status code as "200"
+    And Response should contain date as "<ResponseDate>"
+    And Response should contain not null values for "<CheckCurrencies>"
+    And Response should contain base currency as "<BaseCurrency>"
+
+    Examples: 
+      | EndPoint   | QueryParam | BaseCurrency | ResponseDate | CheckCurrencies |
+      | 2020-06-01 | base       | INR          | 2020-06-01   | AUD,GBP         |
+      | 2020-05-31 | base       | USD          | 2020-05-31   | NZD,INR         |
+      | 2019-12-31 | base       | USD          | 2019-12-31   | NZD,INR         |
+
+  @FutureConversionRates @UAT
+  Scenario Outline: Validate that API returns data for today when queried for a future date
+    When API is hit with end point as "<EndPoint>" "<QueryParam>" "<BaseCurrency>"
+    Then API Should respond with status code as "200"
+    And Response should contain date as "<ResponseDate>"
+    And Response for future date should match with response for today
+    And Response should contain not null values for "<CheckCurrencies>"
+
+    Examples: 
+      | EndPoint   | QueryParam | BaseCurrency | ResponseDate | CheckCurrencies |
+      | 2020-06-03 | base       | EUR          | Today        | NZD,INR         |
+      | 2020-12-31 | base       | EUR          | Today        | NZD,INR         |

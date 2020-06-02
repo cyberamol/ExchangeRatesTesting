@@ -1,0 +1,2426 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "output": [
+              "URI under testhttps://api.ratesapi.io/api/latest",
+              "API is up and running"
+            ],
+            "result": {
+              "duration": 1777386700,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Foreign Exchange Rates API is accessible",
+            "match": {
+              "location": "ConversionRatesAPISteps.isForeignExchangeAPIAccessible()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-02T11:09:53.957Z",
+        "before": [
+          {
+            "result": {
+              "duration": 28537500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "ConversionRatesAPISteps.SetUp(Scenario)"
+            }
+          }
+        ],
+        "line": 15,
+        "name": "Validate that API responds with correct status code when queried with different parameter combinations",
+        "description": "",
+        "id": "get-and-validate-conversion-rates-for-past-and-future-dates-using-foreign-exchange-rates-api;validate-that-api-responds-with-correct-status-code-when-queried-with-different-parameter-combinations;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "output": [
+              "Hitting endpoint \u0027https://api.ratesapi.io/api/latest with symbols \u003d GBP",
+              "Response received : {\"base\":\"EUR\",\"rates\":{\"GBP\":0.89673},\"date\":\"2020-06-01\"}"
+            ],
+            "result": {
+              "duration": 470949900,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "API is hit with end point as \"latest\" \"symbols\" \"GBP\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "latest",
+                  "offset": 30
+                },
+                {
+                  "val": "symbols",
+                  "offset": 39
+                },
+                {
+                  "val": "GBP",
+                  "offset": 49
+                }
+              ],
+              "location": "ConversionRatesAPISteps.api_is_hit_with_end_point_as(String,String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "output": [
+              "Actual status code : \u0027200\u0027 matches with expected status code : \u0027200\u0027"
+            ],
+            "result": {
+              "duration": 1040300,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "API Should respond with status code as \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 40
+                }
+              ],
+              "location": "ConversionRatesAPISteps.api_Should_respond_with_status_code_as(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "output": [
+              "Response currency : \u0027GBP\u0027 , returned a valid actual value \u00270.89673\u0027"
+            ],
+            "result": {
+              "duration": 372058600,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "Response should contain not null values for \"GBP\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "GBP",
+                  "offset": 45
+                }
+              ],
+              "location": "ConversionRatesAPISteps.response_should_contain_not_null_values_for_Currencies(String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@UAT"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "output": [
+              "URI under testhttps://api.ratesapi.io/api/latest",
+              "API is up and running"
+            ],
+            "result": {
+              "duration": 433596000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Foreign Exchange Rates API is accessible",
+            "match": {
+              "location": "ConversionRatesAPISteps.isForeignExchangeAPIAccessible()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-02T11:09:56.646Z",
+        "before": [
+          {
+            "result": {
+              "duration": 231400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "ConversionRatesAPISteps.SetUp(Scenario)"
+            }
+          }
+        ],
+        "line": 16,
+        "name": "Validate that API responds with correct status code when queried with different parameter combinations",
+        "description": "",
+        "id": "get-and-validate-conversion-rates-for-past-and-future-dates-using-foreign-exchange-rates-api;validate-that-api-responds-with-correct-status-code-when-queried-with-different-parameter-combinations;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "output": [
+              "Hitting endpoint \u0027https://api.ratesapi.io/api/latest with symbols \u003d USD,GBP",
+              "Response received : {\"base\":\"EUR\",\"rates\":{\"USD\":1.1116,\"GBP\":0.89673},\"date\":\"2020-06-01\"}"
+            ],
+            "result": {
+              "duration": 447284800,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "API is hit with end point as \"latest\" \"symbols\" \"USD,GBP\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "latest",
+                  "offset": 30
+                },
+                {
+                  "val": "symbols",
+                  "offset": 39
+                },
+                {
+                  "val": "USD,GBP",
+                  "offset": 49
+                }
+              ],
+              "location": "ConversionRatesAPISteps.api_is_hit_with_end_point_as(String,String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "output": [
+              "Actual status code : \u0027200\u0027 matches with expected status code : \u0027200\u0027"
+            ],
+            "result": {
+              "duration": 610800,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "API Should respond with status code as \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 40
+                }
+              ],
+              "location": "ConversionRatesAPISteps.api_Should_respond_with_status_code_as(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "output": [
+              "Response currency : \u0027USD\u0027 , returned a valid actual value \u00271.1116\u0027",
+              "Response currency : \u0027GBP\u0027 , returned a valid actual value \u00270.89673\u0027"
+            ],
+            "result": {
+              "duration": 9620900,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "Response should contain not null values for \"USD,GBP\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "USD,GBP",
+                  "offset": 45
+                }
+              ],
+              "location": "ConversionRatesAPISteps.response_should_contain_not_null_values_for_Currencies(String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@UAT"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "output": [
+              "URI under testhttps://api.ratesapi.io/api/latest",
+              "API is up and running"
+            ],
+            "result": {
+              "duration": 440967100,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Foreign Exchange Rates API is accessible",
+            "match": {
+              "location": "ConversionRatesAPISteps.isForeignExchangeAPIAccessible()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-02T11:09:57.540Z",
+        "before": [
+          {
+            "result": {
+              "duration": 133300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "ConversionRatesAPISteps.SetUp(Scenario)"
+            }
+          }
+        ],
+        "line": 17,
+        "name": "Validate that API responds with correct status code when queried with different parameter combinations",
+        "description": "",
+        "id": "get-and-validate-conversion-rates-for-past-and-future-dates-using-foreign-exchange-rates-api;validate-that-api-responds-with-correct-status-code-when-queried-with-different-parameter-combinations;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "output": [
+              "Hitting endpoint \u0027https://api.ratesapi.io/api/latest with base \u003d GBP",
+              "Response received : {\"base\":\"GBP\",\"rates\":{\"GBP\":1.0,\"HKD\":9.6088008654,\"IDR\":18110.7802794598,\"ILS\":4.343224828,\"DKK\":8.3134276761,\"INR\":93.6045409432,\"CHF\":1.1916630424,\"MXN\":27.2679624859,\"CZK\":29.9521595129,\"SGD\":1.7473487003,\"THB\":39.2581936592,\"HRK\":8.4635285984,\"EUR\":1.1151628695,\"MYR\":5.3532278389,\"NOK\":12.0314921994,\"CNY\":8.8462524952,\"BGN\":2.1810355402,\"PHP\":62.390017062,\"PLN\":4.9377181537,\"ZAR\":21.633379055,\"CAD\":1.6981700177,\"ISK\":168.3895933001,\"BRL\":6.6102394255,\"RON\":5.4015143912,\"NZD\":1.9876662987,\"TRY\":8.4465781227,\"JPY\":133.5407536271,\"RUB\":86.3557592586,\"KRW\":1521.5728257112,\"USD\":1.2396150458,\"AUD\":1.8386805393,\"HUF\":385.2330132816,\"SEK\":11.6685066854},\"date\":\"2020-06-01\"}"
+            ],
+            "result": {
+              "duration": 526614100,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "API is hit with end point as \"latest\" \"base\" \"GBP\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "latest",
+                  "offset": 30
+                },
+                {
+                  "val": "base",
+                  "offset": 39
+                },
+                {
+                  "val": "GBP",
+                  "offset": 46
+                }
+              ],
+              "location": "ConversionRatesAPISteps.api_is_hit_with_end_point_as(String,String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "output": [
+              "Actual status code : \u0027200\u0027 matches with expected status code : \u0027200\u0027"
+            ],
+            "result": {
+              "duration": 1044100,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "API Should respond with status code as \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 40
+                }
+              ],
+              "location": "ConversionRatesAPISteps.api_Should_respond_with_status_code_as(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "output": [
+              "Response currency : \u0027GBP\u0027 , returned a valid actual value \u00271.0\u0027"
+            ],
+            "result": {
+              "duration": 19595300,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "Response should contain not null values for \"GBP\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "GBP",
+                  "offset": 45
+                }
+              ],
+              "location": "ConversionRatesAPISteps.response_should_contain_not_null_values_for_Currencies(String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@UAT"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "output": [
+              "URI under testhttps://api.ratesapi.io/api/latest",
+              "API is up and running"
+            ],
+            "result": {
+              "duration": 441087700,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Foreign Exchange Rates API is accessible",
+            "match": {
+              "location": "ConversionRatesAPISteps.isForeignExchangeAPIAccessible()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-02T11:09:58.530Z",
+        "before": [
+          {
+            "result": {
+              "duration": 115200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "ConversionRatesAPISteps.SetUp(Scenario)"
+            }
+          }
+        ],
+        "line": 29,
+        "name": "Confirm that API responds with correct base value for currency based on input",
+        "description": "",
+        "id": "get-and-validate-conversion-rates-for-past-and-future-dates-using-foreign-exchange-rates-api;confirm-that-api-responds-with-correct-base-value-for-currency-based-on-input;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "output": [
+              "Hitting endpoint \u0027https://api.ratesapi.io/api/latest with base \u003d GBP",
+              "Response received : {\"base\":\"GBP\",\"rates\":{\"GBP\":1.0,\"HKD\":9.6088008654,\"IDR\":18110.7802794598,\"ILS\":4.343224828,\"DKK\":8.3134276761,\"INR\":93.6045409432,\"CHF\":1.1916630424,\"MXN\":27.2679624859,\"CZK\":29.9521595129,\"SGD\":1.7473487003,\"THB\":39.2581936592,\"HRK\":8.4635285984,\"EUR\":1.1151628695,\"MYR\":5.3532278389,\"NOK\":12.0314921994,\"CNY\":8.8462524952,\"BGN\":2.1810355402,\"PHP\":62.390017062,\"PLN\":4.9377181537,\"ZAR\":21.633379055,\"CAD\":1.6981700177,\"ISK\":168.3895933001,\"BRL\":6.6102394255,\"RON\":5.4015143912,\"NZD\":1.9876662987,\"TRY\":8.4465781227,\"JPY\":133.5407536271,\"RUB\":86.3557592586,\"KRW\":1521.5728257112,\"USD\":1.2396150458,\"AUD\":1.8386805393,\"HUF\":385.2330132816,\"SEK\":11.6685066854},\"date\":\"2020-06-01\"}"
+            ],
+            "result": {
+              "duration": 436887900,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "API is hit with end point as \"latest\" \"base\" \"GBP\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "latest",
+                  "offset": 30
+                },
+                {
+                  "val": "base",
+                  "offset": 39
+                },
+                {
+                  "val": "GBP",
+                  "offset": 46
+                }
+              ],
+              "location": "ConversionRatesAPISteps.api_is_hit_with_end_point_as(String,String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "output": [
+              "Actual status code : \u0027200\u0027 matches with expected status code : \u0027200\u0027"
+            ],
+            "result": {
+              "duration": 617800,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "API Should respond with status code as \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 40
+                }
+              ],
+              "location": "ConversionRatesAPISteps.api_Should_respond_with_status_code_as(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "output": [
+              "Actual status code : \u0027200\u0027 matches with expected status code : \u0027200\u0027",
+              "Actual response base currency : \u0027GBP\u0027 matches with expected base currency : \u0027GBP\u0027"
+            ],
+            "result": {
+              "duration": 10717900,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "Response should contain base currency as \"GBP\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "GBP",
+                  "offset": 42
+                }
+              ],
+              "location": "ConversionRatesAPISteps.response_should_contain_base_currency_as(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "output": [
+              "Field : \u0027GBP\u0027 , Actual value \u00271.0\u0027 matches with Expected value \u00271.0"
+            ],
+            "result": {
+              "duration": 9841700,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "Response should contain value \"1.0\" for \"GBP\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1.0",
+                  "offset": 31
+                },
+                {
+                  "val": "GBP",
+                  "offset": 41
+                }
+              ],
+              "location": "ConversionRatesAPISteps.Response_should_contain_value(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "output": [
+              "Response currency : \u0027INR\u0027 , returned a valid actual value \u002793.60454\u0027",
+              "Response currency : \u0027AUD\u0027 , returned a valid actual value \u00271.8386805\u0027"
+            ],
+            "result": {
+              "duration": 10515500,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "Response should contain not null values for \"INR,AUD\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "INR,AUD",
+                  "offset": 45
+                }
+              ],
+              "location": "ConversionRatesAPISteps.response_should_contain_not_null_values_for_Currencies(String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@UAT"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "output": [
+              "URI under testhttps://api.ratesapi.io/api/latest",
+              "API is up and running"
+            ],
+            "result": {
+              "duration": 426107000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Foreign Exchange Rates API is accessible",
+            "match": {
+              "location": "ConversionRatesAPISteps.isForeignExchangeAPIAccessible()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-02T11:09:59.444Z",
+        "before": [
+          {
+            "result": {
+              "duration": 148500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "ConversionRatesAPISteps.SetUp(Scenario)"
+            }
+          }
+        ],
+        "line": 30,
+        "name": "Confirm that API responds with correct base value for currency based on input",
+        "description": "",
+        "id": "get-and-validate-conversion-rates-for-past-and-future-dates-using-foreign-exchange-rates-api;confirm-that-api-responds-with-correct-base-value-for-currency-based-on-input;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "output": [
+              "Hitting endpoint \u0027https://api.ratesapi.io/api/latest with base \u003d INR",
+              "Response received : {\"base\":\"INR\",\"rates\":{\"GBP\":0.0106832424,\"HKD\":0.1026531488,\"IDR\":193.4818556554,\"ILS\":0.0463997236,\"DKK\":0.088814363,\"INR\":1.0,\"CHF\":0.0127308251,\"MXN\":0.2913102528,\"CZK\":0.3199861803,\"SGD\":0.0186673497,\"THB\":0.4194047988,\"HRK\":0.0904179275,\"EUR\":0.0119135552,\"MYR\":0.0571898306,\"NOK\":0.1285353475,\"CNY\":0.0945066597,\"BGN\":0.0233005313,\"PHP\":0.6665276752,\"PLN\":0.0527508399,\"ZAR\":0.2311146322,\"CAD\":0.0181419619,\"ISK\":1.7989468417,\"BRL\":0.0706187901,\"RON\":0.0577056875,\"NZD\":0.0212347209,\"TRY\":0.0902368415,\"JPY\":1.4266482404,\"RUB\":0.9225595082,\"KRW\":16.255331316,\"USD\":0.013243108,\"AUD\":0.0196430699,\"HUF\":4.1155376587,\"SEK\":0.1246574853},\"date\":\"2020-06-01\"}"
+            ],
+            "result": {
+              "duration": 439323100,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "API is hit with end point as \"latest\" \"base\" \"INR\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "latest",
+                  "offset": 30
+                },
+                {
+                  "val": "base",
+                  "offset": 39
+                },
+                {
+                  "val": "INR",
+                  "offset": 46
+                }
+              ],
+              "location": "ConversionRatesAPISteps.api_is_hit_with_end_point_as(String,String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "output": [
+              "Actual status code : \u0027200\u0027 matches with expected status code : \u0027200\u0027"
+            ],
+            "result": {
+              "duration": 579600,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "API Should respond with status code as \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 40
+                }
+              ],
+              "location": "ConversionRatesAPISteps.api_Should_respond_with_status_code_as(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "output": [
+              "Actual status code : \u0027200\u0027 matches with expected status code : \u0027200\u0027",
+              "Actual response base currency : \u0027INR\u0027 matches with expected base currency : \u0027INR\u0027"
+            ],
+            "result": {
+              "duration": 9226900,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "Response should contain base currency as \"INR\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "INR",
+                  "offset": 42
+                }
+              ],
+              "location": "ConversionRatesAPISteps.response_should_contain_base_currency_as(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "output": [
+              "Field : \u0027INR\u0027 , Actual value \u00271.0\u0027 matches with Expected value \u00271.0"
+            ],
+            "result": {
+              "duration": 8944100,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "Response should contain value \"1.0\" for \"INR\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1.0",
+                  "offset": 31
+                },
+                {
+                  "val": "INR",
+                  "offset": 41
+                }
+              ],
+              "location": "ConversionRatesAPISteps.Response_should_contain_value(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "output": [
+              "Response currency : \u0027PHP\u0027 , returned a valid actual value \u00270.6665277\u0027",
+              "Response currency : \u0027AUD\u0027 , returned a valid actual value \u00270.01964307\u0027"
+            ],
+            "result": {
+              "duration": 8408400,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "Response should contain not null values for \"PHP,AUD\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "PHP,AUD",
+                  "offset": 45
+                }
+              ],
+              "location": "ConversionRatesAPISteps.response_should_contain_not_null_values_for_Currencies(String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@UAT"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "output": [
+              "URI under testhttps://api.ratesapi.io/api/latest",
+              "API is up and running"
+            ],
+            "result": {
+              "duration": 439709400,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Foreign Exchange Rates API is accessible",
+            "match": {
+              "location": "ConversionRatesAPISteps.isForeignExchangeAPIAccessible()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-02T11:10:00.340Z",
+        "before": [
+          {
+            "result": {
+              "duration": 109000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "ConversionRatesAPISteps.SetUp(Scenario)"
+            }
+          }
+        ],
+        "line": 31,
+        "name": "Confirm that API responds with correct base value for currency based on input",
+        "description": "",
+        "id": "get-and-validate-conversion-rates-for-past-and-future-dates-using-foreign-exchange-rates-api;confirm-that-api-responds-with-correct-base-value-for-currency-based-on-input;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "output": [
+              "Hitting endpoint \u0027https://api.ratesapi.io/api/latest with base \u003d AUD",
+              "Response received : {\"base\":\"AUD\",\"rates\":{\"GBP\":0.5438682678,\"HKD\":5.2259218826,\"IDR\":9849.8786996604,\"ILS\":2.362142164,\"DKK\":4.5214095099,\"INR\":50.9085395439,\"CHF\":0.6481077147,\"MXN\":14.8301795245,\"CZK\":16.2900291121,\"SGD\":0.9503275109,\"THB\":21.3512857836,\"HRK\":4.6030446385,\"EUR\":0.6065016982,\"MYR\":2.9114507521,\"NOK\":6.5435468219,\"CNY\":4.8111960213,\"BGN\":1.1861960213,\"PHP\":33.9319505095,\"PLN\":2.6854682193,\"ZAR\":11.765708394,\"CAD\":0.923580786,\"ISK\":91.5817564289,\"BRL\":3.5950994663,\"RON\":2.9377122756,\"NZD\":1.0810286269,\"TRY\":4.5938258127,\"JPY\":72.62857836,\"RUB\":46.9661572052,\"KRW\":827.5351770985,\"USD\":0.6741872877,\"AUD\":1.0,\"HUF\":209.5160116448,\"SEK\":6.3461305192},\"date\":\"2020-06-01\"}"
+            ],
+            "result": {
+              "duration": 431772600,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "API is hit with end point as \"latest\" \"base\" \"AUD\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "latest",
+                  "offset": 30
+                },
+                {
+                  "val": "base",
+                  "offset": 39
+                },
+                {
+                  "val": "AUD",
+                  "offset": 46
+                }
+              ],
+              "location": "ConversionRatesAPISteps.api_is_hit_with_end_point_as(String,String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "output": [
+              "Actual status code : \u0027200\u0027 matches with expected status code : \u0027200\u0027"
+            ],
+            "result": {
+              "duration": 534500,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "API Should respond with status code as \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 40
+                }
+              ],
+              "location": "ConversionRatesAPISteps.api_Should_respond_with_status_code_as(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "output": [
+              "Actual status code : \u0027200\u0027 matches with expected status code : \u0027200\u0027",
+              "Actual response base currency : \u0027AUD\u0027 matches with expected base currency : \u0027AUD\u0027"
+            ],
+            "result": {
+              "duration": 9460800,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "Response should contain base currency as \"AUD\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "AUD",
+                  "offset": 42
+                }
+              ],
+              "location": "ConversionRatesAPISteps.response_should_contain_base_currency_as(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "output": [
+              "Field : \u0027AUD\u0027 , Actual value \u00271.0\u0027 matches with Expected value \u00271.0"
+            ],
+            "result": {
+              "duration": 8855000,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "Response should contain value \"1.0\" for \"AUD\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1.0",
+                  "offset": 31
+                },
+                {
+                  "val": "AUD",
+                  "offset": 41
+                }
+              ],
+              "location": "ConversionRatesAPISteps.Response_should_contain_value(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "output": [
+              "Response currency : \u0027INR\u0027 , returned a valid actual value \u002750.90854\u0027",
+              "Response currency : \u0027USD\u0027 , returned a valid actual value \u00270.6741873\u0027"
+            ],
+            "result": {
+              "duration": 8911600,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "Response should contain not null values for \"INR,USD\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "INR,USD",
+                  "offset": 45
+                }
+              ],
+              "location": "ConversionRatesAPISteps.response_should_contain_not_null_values_for_Currencies(String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@UAT"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "output": [
+              "URI under testhttps://api.ratesapi.io/api/latest",
+              "API is up and running"
+            ],
+            "result": {
+              "duration": 432664500,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Foreign Exchange Rates API is accessible",
+            "match": {
+              "location": "ConversionRatesAPISteps.isForeignExchangeAPIAccessible()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-02T11:10:01.241Z",
+        "before": [
+          {
+            "result": {
+              "duration": 126300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "ConversionRatesAPISteps.SetUp(Scenario)"
+            }
+          }
+        ],
+        "line": 32,
+        "name": "Confirm that API responds with correct base value for currency based on input",
+        "description": "",
+        "id": "get-and-validate-conversion-rates-for-past-and-future-dates-using-foreign-exchange-rates-api;confirm-that-api-responds-with-correct-base-value-for-currency-based-on-input;;5",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "output": [
+              "Hitting endpoint \u0027https://api.ratesapi.io/api/latest with base \u003d HKD",
+              "Response received : {\"base\":\"HKD\",\"rates\":{\"GBP\":0.1040712586,\"HKD\":1.0,\"IDR\":1884.8116984855,\"ILS\":0.4520048744,\"DKK\":0.8651888818,\"INR\":9.7415423896,\"CHF\":0.1240178727,\"MXN\":2.8378111762,\"CZK\":3.1171589392,\"SGD\":0.1818487785,\"THB\":4.0856496257,\"HRK\":0.8808100737,\"EUR\":0.1160564034,\"MYR\":0.5571171589,\"NOK\":1.2521325364,\"CNY\":0.9206406313,\"BGN\":0.2269831138,\"PHP\":6.4930076017,\"PLN\":0.513874543,\"ZAR\":2.2514129867,\"CAD\":0.1767306911,\"ISK\":17.5245169152,\"BRL\":0.6879359369,\"RON\":0.5621424012,\"NZD\":0.2068589334,\"TRY\":0.8790460164,\"JPY\":13.8977543086,\"RUB\":8.9871525561,\"KRW\":158.3519990715,\"USD\":0.129008298,\"AUD\":0.1913537979,\"HUF\":40.0916845587,\"SEK\":1.2143561771},\"date\":\"2020-06-01\"}"
+            ],
+            "result": {
+              "duration": 426931200,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "API is hit with end point as \"latest\" \"base\" \"HKD\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "latest",
+                  "offset": 30
+                },
+                {
+                  "val": "base",
+                  "offset": 39
+                },
+                {
+                  "val": "HKD",
+                  "offset": 46
+                }
+              ],
+              "location": "ConversionRatesAPISteps.api_is_hit_with_end_point_as(String,String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "output": [
+              "Actual status code : \u0027200\u0027 matches with expected status code : \u0027200\u0027"
+            ],
+            "result": {
+              "duration": 609900,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "API Should respond with status code as \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 40
+                }
+              ],
+              "location": "ConversionRatesAPISteps.api_Should_respond_with_status_code_as(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "output": [
+              "Actual status code : \u0027200\u0027 matches with expected status code : \u0027200\u0027",
+              "Actual response base currency : \u0027HKD\u0027 matches with expected base currency : \u0027HKD\u0027"
+            ],
+            "result": {
+              "duration": 8777700,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "Response should contain base currency as \"HKD\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "HKD",
+                  "offset": 42
+                }
+              ],
+              "location": "ConversionRatesAPISteps.response_should_contain_base_currency_as(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "output": [
+              "Field : \u0027HKD\u0027 , Actual value \u00271.0\u0027 matches with Expected value \u00271.0"
+            ],
+            "result": {
+              "duration": 8692800,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "Response should contain value \"1.0\" for \"HKD\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1.0",
+                  "offset": 31
+                },
+                {
+                  "val": "HKD",
+                  "offset": 41
+                }
+              ],
+              "location": "ConversionRatesAPISteps.Response_should_contain_value(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "output": [
+              "Response currency : \u0027INR\u0027 , returned a valid actual value \u00279.741543\u0027",
+              "Response currency : \u0027AUD\u0027 , returned a valid actual value \u00270.1913538\u0027"
+            ],
+            "result": {
+              "duration": 8884400,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "Response should contain not null values for \"INR,AUD\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "INR,AUD",
+                  "offset": 45
+                }
+              ],
+              "location": "ConversionRatesAPISteps.response_should_contain_not_null_values_for_Currencies(String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@UAT"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "output": [
+              "URI under testhttps://api.ratesapi.io/api/latest",
+              "API is up and running"
+            ],
+            "result": {
+              "duration": 436697600,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Foreign Exchange Rates API is accessible",
+            "match": {
+              "location": "ConversionRatesAPISteps.isForeignExchangeAPIAccessible()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-02T11:10:02.130Z",
+        "before": [
+          {
+            "result": {
+              "duration": 139700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "ConversionRatesAPISteps.SetUp(Scenario)"
+            }
+          }
+        ],
+        "line": 33,
+        "name": "Confirm that API responds with correct base value for currency based on input",
+        "description": "",
+        "id": "get-and-validate-conversion-rates-for-past-and-future-dates-using-foreign-exchange-rates-api;confirm-that-api-responds-with-correct-base-value-for-currency-based-on-input;;6",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "output": [
+              "Hitting endpoint \u0027https://api.ratesapi.io/api/latest with base \u003d NZD",
+              "Response received : {\"base\":\"NZD\",\"rates\":{\"GBP\":0.5031025583,\"HKD\":4.834212298,\"IDR\":9111.5798922801,\"ILS\":2.1850875224,\"DKK\":4.1825067325,\"INR\":47.0926840215,\"CHF\":0.5995287253,\"MXN\":13.7185816876,\"CZK\":15.069008079,\"SGD\":0.8790956014,\"THB\":19.7508976661,\"HRK\":4.2580228905,\"EUR\":0.5610412926,\"MYR\":2.6932226212,\"NOK\":6.0530745063,\"CNY\":4.4505722621,\"BGN\":1.0972845601,\"PHP\":31.3885771993,\"PLN\":2.4841786355,\"ZAR\":10.8838083483,\"CAD\":0.8543536804,\"ISK\":84.7172351885,\"BRL\":3.3256283662,\"RON\":2.7175157092,\"NZD\":1.0,\"TRY\":4.2494950628,\"JPY\":67.1846947935,\"RUB\":43.4458034111,\"KRW\":765.5071813285,\"USD\":0.6236535009,\"AUD\":0.9250448833,\"HUF\":193.8117145422,\"SEK\":5.8704555655},\"date\":\"2020-06-01\"}"
+            ],
+            "result": {
+              "duration": 478011700,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "API is hit with end point as \"latest\" \"base\" \"NZD\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "latest",
+                  "offset": 30
+                },
+                {
+                  "val": "base",
+                  "offset": 39
+                },
+                {
+                  "val": "NZD",
+                  "offset": 46
+                }
+              ],
+              "location": "ConversionRatesAPISteps.api_is_hit_with_end_point_as(String,String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "output": [
+              "Actual status code : \u0027200\u0027 matches with expected status code : \u0027200\u0027"
+            ],
+            "result": {
+              "duration": 698600,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "API Should respond with status code as \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 40
+                }
+              ],
+              "location": "ConversionRatesAPISteps.api_Should_respond_with_status_code_as(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "output": [
+              "Actual status code : \u0027200\u0027 matches with expected status code : \u0027200\u0027",
+              "Actual response base currency : \u0027NZD\u0027 matches with expected base currency : \u0027NZD\u0027"
+            ],
+            "result": {
+              "duration": 9958700,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "Response should contain base currency as \"NZD\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "NZD",
+                  "offset": 42
+                }
+              ],
+              "location": "ConversionRatesAPISteps.response_should_contain_base_currency_as(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "output": [
+              "Field : \u0027NZD\u0027 , Actual value \u00271.0\u0027 matches with Expected value \u00271.0"
+            ],
+            "result": {
+              "duration": 8678000,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "Response should contain value \"1.0\" for \"NZD\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1.0",
+                  "offset": 31
+                },
+                {
+                  "val": "NZD",
+                  "offset": 41
+                }
+              ],
+              "location": "ConversionRatesAPISteps.Response_should_contain_value(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "output": [
+              "Response currency : \u0027INR\u0027 , returned a valid actual value \u002747.092686\u0027",
+              "Response currency : \u0027AUD\u0027 , returned a valid actual value \u00270.9250449\u0027"
+            ],
+            "result": {
+              "duration": 8599900,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "Response should contain not null values for \"INR,AUD\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "INR,AUD",
+                  "offset": 45
+                }
+              ],
+              "location": "ConversionRatesAPISteps.response_should_contain_not_null_values_for_Currencies(String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@UAT"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "output": [
+              "URI under testhttps://api.ratesapi.io/api/latest",
+              "API is up and running"
+            ],
+            "result": {
+              "duration": 445613800,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Foreign Exchange Rates API is accessible",
+            "match": {
+              "location": "ConversionRatesAPISteps.isForeignExchangeAPIAccessible()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-02T11:10:03.075Z",
+        "before": [
+          {
+            "result": {
+              "duration": 135500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "ConversionRatesAPISteps.SetUp(Scenario)"
+            }
+          }
+        ],
+        "line": 43,
+        "name": "Validate results when incorrect/invalid endpoint is invoked",
+        "description": "",
+        "id": "get-and-validate-conversion-rates-for-past-and-future-dates-using-foreign-exchange-rates-api;validate-results-when-incorrect/invalid-endpoint-is-invoked;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "output": [
+              "Hitting endpoint \u0027https://api.ratesapi.io/api/latest with base \u003d BKG",
+              "Response received : {\"error\":\"Base \u0027BKG\u0027 is not supported.\"}"
+            ],
+            "result": {
+              "duration": 509304600,
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "API is hit with end point as ?base\u003d\"BKG\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "BKG",
+                  "offset": 36
+                }
+              ],
+              "location": "ConversionRatesAPISteps.api_is_hit_with_end_point_as(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "output": [
+              "Actual status code : \u0027400\u0027 matches with expected status code : \u0027400\u0027"
+            ],
+            "result": {
+              "duration": 418600,
+              "status": "passed"
+            },
+            "line": 38,
+            "name": "API Should respond with status code as \"400\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "400",
+                  "offset": 40
+                }
+              ],
+              "location": "ConversionRatesAPISteps.api_Should_respond_with_status_code_as(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "output": [
+              "Expected error message received : \u0027{\"error\":\"Base \u0027BKG\u0027 is not supported.\"}\u0027"
+            ],
+            "result": {
+              "duration": 546800,
+              "status": "passed"
+            },
+            "line": 39,
+            "name": "Error message should be displayed as \"Base \u0027BKG\u0027 is not supported.\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Base \u0027BKG\u0027 is not supported.",
+                  "offset": 38
+                }
+              ],
+              "location": "ConversionRatesAPISteps.error_message_should_be_displayed_as(String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@InvalidEndpoint"
+          },
+          {
+            "name": "@UAT"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "output": [
+              "URI under testhttps://api.ratesapi.io/api/latest",
+              "API is up and running"
+            ],
+            "result": {
+              "duration": 434733500,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Foreign Exchange Rates API is accessible",
+            "match": {
+              "location": "ConversionRatesAPISteps.isForeignExchangeAPIAccessible()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-02T11:10:04.035Z",
+        "before": [
+          {
+            "result": {
+              "duration": 105100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "ConversionRatesAPISteps.SetUp(Scenario)"
+            }
+          }
+        ],
+        "line": 44,
+        "name": "Validate results when incorrect/invalid endpoint is invoked",
+        "description": "",
+        "id": "get-and-validate-conversion-rates-for-past-and-future-dates-using-foreign-exchange-rates-api;validate-results-when-incorrect/invalid-endpoint-is-invoked;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "output": [
+              "Hitting endpoint \u0027https://api.ratesapi.io/api/latest with base \u003d 123",
+              "Response received : {\"error\":\"Base \u0027123\u0027 is not supported.\"}"
+            ],
+            "result": {
+              "duration": 1553939800,
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "API is hit with end point as ?base\u003d\"123\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "123",
+                  "offset": 36
+                }
+              ],
+              "location": "ConversionRatesAPISteps.api_is_hit_with_end_point_as(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "output": [
+              "Actual status code : \u0027400\u0027 matches with expected status code : \u0027400\u0027"
+            ],
+            "result": {
+              "duration": 516400,
+              "status": "passed"
+            },
+            "line": 38,
+            "name": "API Should respond with status code as \"400\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "400",
+                  "offset": 40
+                }
+              ],
+              "location": "ConversionRatesAPISteps.api_Should_respond_with_status_code_as(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "output": [
+              "Expected error message received : \u0027{\"error\":\"Base \u0027123\u0027 is not supported.\"}\u0027"
+            ],
+            "result": {
+              "duration": 543600,
+              "status": "passed"
+            },
+            "line": 39,
+            "name": "Error message should be displayed as \"Base \u0027123\u0027 is not supported.\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Base \u0027123\u0027 is not supported.",
+                  "offset": 38
+                }
+              ],
+              "location": "ConversionRatesAPISteps.error_message_should_be_displayed_as(String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@InvalidEndpoint"
+          },
+          {
+            "name": "@UAT"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "output": [
+              "URI under testhttps://api.ratesapi.io/api/latest",
+              "API is up and running"
+            ],
+            "result": {
+              "duration": 432427200,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Foreign Exchange Rates API is accessible",
+            "match": {
+              "location": "ConversionRatesAPISteps.isForeignExchangeAPIAccessible()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-02T11:10:06.027Z",
+        "before": [
+          {
+            "result": {
+              "duration": 124600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "ConversionRatesAPISteps.SetUp(Scenario)"
+            }
+          }
+        ],
+        "line": 45,
+        "name": "Validate results when incorrect/invalid endpoint is invoked",
+        "description": "",
+        "id": "get-and-validate-conversion-rates-for-past-and-future-dates-using-foreign-exchange-rates-api;validate-results-when-incorrect/invalid-endpoint-is-invoked;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "output": [
+              "Hitting endpoint \u0027https://api.ratesapi.io/api/latest with base \u003d @#$",
+              "Response received : {\"error\":\"Base \u0027@#$\u0027 is not supported.\"}"
+            ],
+            "result": {
+              "duration": 511626200,
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "API is hit with end point as ?base\u003d\"@#$\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "@#$",
+                  "offset": 36
+                }
+              ],
+              "location": "ConversionRatesAPISteps.api_is_hit_with_end_point_as(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "output": [
+              "Actual status code : \u0027400\u0027 matches with expected status code : \u0027400\u0027"
+            ],
+            "result": {
+              "duration": 511700,
+              "status": "passed"
+            },
+            "line": 38,
+            "name": "API Should respond with status code as \"400\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "400",
+                  "offset": 40
+                }
+              ],
+              "location": "ConversionRatesAPISteps.api_Should_respond_with_status_code_as(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "output": [
+              "Expected error message received : \u0027{\"error\":\"Base \u0027@#$\u0027 is not supported.\"}\u0027"
+            ],
+            "result": {
+              "duration": 511400,
+              "status": "passed"
+            },
+            "line": 39,
+            "name": "Error message should be displayed as \"Base \u0027@#$\u0027 is not supported.\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Base \u0027@#$\u0027 is not supported.",
+                  "offset": 38
+                }
+              ],
+              "location": "ConversionRatesAPISteps.error_message_should_be_displayed_as(String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@InvalidEndpoint"
+          },
+          {
+            "name": "@UAT"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "output": [
+              "URI under testhttps://api.ratesapi.io/api/latest",
+              "API is up and running"
+            ],
+            "result": {
+              "duration": 438914900,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Foreign Exchange Rates API is accessible",
+            "match": {
+              "location": "ConversionRatesAPISteps.isForeignExchangeAPIAccessible()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-02T11:10:06.974Z",
+        "before": [
+          {
+            "result": {
+              "duration": 109700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "ConversionRatesAPISteps.SetUp(Scenario)"
+            }
+          }
+        ],
+        "line": 57,
+        "name": "Validate that API returns data for specific past date",
+        "description": "",
+        "id": "get-and-validate-conversion-rates-for-past-and-future-dates-using-foreign-exchange-rates-api;validate-that-api-returns-data-for-specific-past-date;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "output": [
+              "Hitting endpoint \u0027https://api.ratesapi.io/api/ with base \u003d INR",
+              "Response received : {\"base\":\"INR\",\"rates\":{\"GBP\":0.0106832424,\"HKD\":0.1026531488,\"IDR\":193.4818556554,\"ILS\":0.0463997236,\"DKK\":0.088814363,\"INR\":1.0,\"CHF\":0.0127308251,\"MXN\":0.2913102528,\"CZK\":0.3199861803,\"SGD\":0.0186673497,\"THB\":0.4194047988,\"HRK\":0.0904179275,\"EUR\":0.0119135552,\"MYR\":0.0571898306,\"NOK\":0.1285353475,\"CNY\":0.0945066597,\"BGN\":0.0233005313,\"PHP\":0.6665276752,\"PLN\":0.0527508399,\"ZAR\":0.2311146322,\"CAD\":0.0181419619,\"ISK\":1.7989468417,\"BRL\":0.0706187901,\"RON\":0.0577056875,\"NZD\":0.0212347209,\"TRY\":0.0902368415,\"JPY\":1.4266482404,\"RUB\":0.9225595082,\"KRW\":16.255331316,\"USD\":0.013243108,\"AUD\":0.0196430699,\"HUF\":4.1155376587,\"SEK\":0.1246574853},\"date\":\"2020-06-01\"}"
+            ],
+            "result": {
+              "duration": 450748500,
+              "status": "passed"
+            },
+            "line": 49,
+            "name": "API is hit with end point as \"2020-06-01\" \"base\" \"INR\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2020-06-01",
+                  "offset": 30
+                },
+                {
+                  "val": "base",
+                  "offset": 43
+                },
+                {
+                  "val": "INR",
+                  "offset": 50
+                }
+              ],
+              "location": "ConversionRatesAPISteps.api_is_hit_with_end_point_as(String,String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "output": [
+              "Actual status code : \u0027200\u0027 matches with expected status code : \u0027200\u0027"
+            ],
+            "result": {
+              "duration": 572900,
+              "status": "passed"
+            },
+            "line": 50,
+            "name": "API Should respond with status code as \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 40
+                }
+              ],
+              "location": "ConversionRatesAPISteps.api_Should_respond_with_status_code_as(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "output": [
+              "Expected Date 2020-06-01 matches with actual response date 2020-06-01"
+            ],
+            "result": {
+              "duration": 11269800,
+              "status": "passed"
+            },
+            "line": 51,
+            "name": "Response should contain date as \"2020-06-01\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2020-06-01",
+                  "offset": 33
+                }
+              ],
+              "location": "ConversionRatesAPISteps.Response_should_contain_expected_date(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "output": [
+              "Response currency : \u0027AUD\u0027 , returned a valid actual value \u00270.01964307\u0027",
+              "Response currency : \u0027GBP\u0027 , returned a valid actual value \u00270.010683242\u0027"
+            ],
+            "result": {
+              "duration": 8810700,
+              "status": "passed"
+            },
+            "line": 52,
+            "name": "Response should contain not null values for \"AUD,GBP\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "AUD,GBP",
+                  "offset": 45
+                }
+              ],
+              "location": "ConversionRatesAPISteps.response_should_contain_not_null_values_for_Currencies(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "output": [
+              "Actual status code : \u0027200\u0027 matches with expected status code : \u0027200\u0027",
+              "Actual response base currency : \u0027INR\u0027 matches with expected base currency : \u0027INR\u0027"
+            ],
+            "result": {
+              "duration": 8683600,
+              "status": "passed"
+            },
+            "line": 53,
+            "name": "Response should contain base currency as \"INR\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "INR",
+                  "offset": 42
+                }
+              ],
+              "location": "ConversionRatesAPISteps.response_should_contain_base_currency_as(String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@PastConversionRates"
+          },
+          {
+            "name": "@UAT"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "output": [
+              "URI under testhttps://api.ratesapi.io/api/latest",
+              "API is up and running"
+            ],
+            "result": {
+              "duration": 430810100,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Foreign Exchange Rates API is accessible",
+            "match": {
+              "location": "ConversionRatesAPISteps.isForeignExchangeAPIAccessible()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-02T11:10:07.898Z",
+        "before": [
+          {
+            "result": {
+              "duration": 162200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "ConversionRatesAPISteps.SetUp(Scenario)"
+            }
+          }
+        ],
+        "line": 58,
+        "name": "Validate that API returns data for specific past date",
+        "description": "",
+        "id": "get-and-validate-conversion-rates-for-past-and-future-dates-using-foreign-exchange-rates-api;validate-that-api-returns-data-for-specific-past-date;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "output": [
+              "Hitting endpoint \u0027https://api.ratesapi.io/api/ with base \u003d USD",
+              "Response received : {\"base\":\"USD\",\"rates\":{\"GBP\":0.8089798851,\"HKD\":7.7538613506,\"IDR\":14610.003591954,\"ILS\":3.5079920977,\"DKK\":6.6937859195,\"INR\":75.5230783046,\"CHF\":0.9626436782,\"MXN\":22.0635775862,\"CZK\":24.1747485632,\"SGD\":1.4109195402,\"THB\":31.8103448276,\"HRK\":6.8130387931,\"EUR\":0.8979885057,\"MYR\":4.3475215517,\"NOK\":9.6875,\"CNY\":7.1350574713,\"BGN\":1.7562859195,\"PHP\":50.4947916667,\"PLN\":3.9955998563,\"ZAR\":17.4424389368,\"CAD\":1.3721264368,\"ISK\":135.4166666667,\"BRL\":5.3568606322,\"RON\":4.3546156609,\"NZD\":1.6040768678,\"TRY\":6.8337823276,\"JPY\":107.1210488506,\"RUB\":70.4396551724,\"KRW\":1235.8207614943,\"USD\":1.0,\"AUD\":1.4979346264,\"HUF\":313.1555316092,\"SEK\":9.4172054598},\"date\":\"2020-05-29\"}"
+            ],
+            "result": {
+              "duration": 452845700,
+              "status": "passed"
+            },
+            "line": 49,
+            "name": "API is hit with end point as \"2020-05-31\" \"base\" \"USD\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2020-05-31",
+                  "offset": 30
+                },
+                {
+                  "val": "base",
+                  "offset": 43
+                },
+                {
+                  "val": "USD",
+                  "offset": 50
+                }
+              ],
+              "location": "ConversionRatesAPISteps.api_is_hit_with_end_point_as(String,String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "output": [
+              "Actual status code : \u0027200\u0027 matches with expected status code : \u0027200\u0027"
+            ],
+            "result": {
+              "duration": 502600,
+              "status": "passed"
+            },
+            "line": 50,
+            "name": "API Should respond with status code as \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 40
+                }
+              ],
+              "location": "ConversionRatesAPISteps.api_Should_respond_with_status_code_as(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "output": [
+              "Expected Date 2020-05-29 matches with actual response date 2020-05-29"
+            ],
+            "result": {
+              "duration": 7844700,
+              "status": "passed"
+            },
+            "line": 51,
+            "name": "Response should contain date as \"2020-05-31\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2020-05-31",
+                  "offset": 33
+                }
+              ],
+              "location": "ConversionRatesAPISteps.Response_should_contain_expected_date(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "output": [
+              "Response currency : \u0027NZD\u0027 , returned a valid actual value \u00271.6040769\u0027",
+              "Response currency : \u0027INR\u0027 , returned a valid actual value \u002775.52308\u0027"
+            ],
+            "result": {
+              "duration": 8087900,
+              "status": "passed"
+            },
+            "line": 52,
+            "name": "Response should contain not null values for \"NZD,INR\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "NZD,INR",
+                  "offset": 45
+                }
+              ],
+              "location": "ConversionRatesAPISteps.response_should_contain_not_null_values_for_Currencies(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "output": [
+              "Actual status code : \u0027200\u0027 matches with expected status code : \u0027200\u0027",
+              "Actual response base currency : \u0027USD\u0027 matches with expected base currency : \u0027USD\u0027"
+            ],
+            "result": {
+              "duration": 7731000,
+              "status": "passed"
+            },
+            "line": 53,
+            "name": "Response should contain base currency as \"USD\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "USD",
+                  "offset": 42
+                }
+              ],
+              "location": "ConversionRatesAPISteps.response_should_contain_base_currency_as(String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@PastConversionRates"
+          },
+          {
+            "name": "@UAT"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "output": [
+              "URI under testhttps://api.ratesapi.io/api/latest",
+              "API is up and running"
+            ],
+            "result": {
+              "duration": 427232300,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Foreign Exchange Rates API is accessible",
+            "match": {
+              "location": "ConversionRatesAPISteps.isForeignExchangeAPIAccessible()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-02T11:10:08.808Z",
+        "before": [
+          {
+            "result": {
+              "duration": 123500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "ConversionRatesAPISteps.SetUp(Scenario)"
+            }
+          }
+        ],
+        "line": 59,
+        "name": "Validate that API returns data for specific past date",
+        "description": "",
+        "id": "get-and-validate-conversion-rates-for-past-and-future-dates-using-foreign-exchange-rates-api;validate-that-api-returns-data-for-specific-past-date;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "output": [
+              "Hitting endpoint \u0027https://api.ratesapi.io/api/ with base \u003d USD",
+              "Response received : {\"base\":\"USD\",\"rates\":{\"GBP\":0.7573437778,\"HKD\":7.7864518426,\"IDR\":13882.4995549226,\"ILS\":3.4578066584,\"DKK\":6.6507922378,\"INR\":71.3788499199,\"CHF\":0.9661741143,\"MXN\":18.8892647321,\"CZK\":22.6170553676,\"SGD\":1.3451130497,\"THB\":29.7445255474,\"HRK\":6.6223072815,\"EUR\":0.890154887,\"MYR\":4.090528752,\"NOK\":8.7803097739,\"CNY\":6.9614562934,\"BGN\":1.7409649279,\"PHP\":50.6498130675,\"PLN\":3.7892113228,\"ZAR\":14.0442406979,\"CAD\":1.299448104,\"ISK\":120.8830336479,\"BRL\":4.019672423,\"RON\":4.2576108243,\"NZD\":1.4823749332,\"TRY\":5.9500623108,\"JPY\":108.5454869147,\"RUB\":62.271942318,\"KRW\":1153.889976856,\"USD\":1.0,\"AUD\":1.4238027417,\"HUF\":294.2228947837,\"SEK\":9.299270073},\"date\":\"2019-12-31\"}"
+            ],
+            "result": {
+              "duration": 445047100,
+              "status": "passed"
+            },
+            "line": 49,
+            "name": "API is hit with end point as \"2019-12-31\" \"base\" \"USD\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2019-12-31",
+                  "offset": 30
+                },
+                {
+                  "val": "base",
+                  "offset": 43
+                },
+                {
+                  "val": "USD",
+                  "offset": 50
+                }
+              ],
+              "location": "ConversionRatesAPISteps.api_is_hit_with_end_point_as(String,String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "output": [
+              "Actual status code : \u0027200\u0027 matches with expected status code : \u0027200\u0027"
+            ],
+            "result": {
+              "duration": 530800,
+              "status": "passed"
+            },
+            "line": 50,
+            "name": "API Should respond with status code as \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 40
+                }
+              ],
+              "location": "ConversionRatesAPISteps.api_Should_respond_with_status_code_as(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "output": [
+              "Expected Date 2019-12-31 matches with actual response date 2019-12-31"
+            ],
+            "result": {
+              "duration": 7239500,
+              "status": "passed"
+            },
+            "line": 51,
+            "name": "Response should contain date as \"2019-12-31\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2019-12-31",
+                  "offset": 33
+                }
+              ],
+              "location": "ConversionRatesAPISteps.Response_should_contain_expected_date(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "output": [
+              "Response currency : \u0027NZD\u0027 , returned a valid actual value \u00271.4823749\u0027",
+              "Response currency : \u0027INR\u0027 , returned a valid actual value \u002771.37885\u0027"
+            ],
+            "result": {
+              "duration": 7415800,
+              "status": "passed"
+            },
+            "line": 52,
+            "name": "Response should contain not null values for \"NZD,INR\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "NZD,INR",
+                  "offset": 45
+                }
+              ],
+              "location": "ConversionRatesAPISteps.response_should_contain_not_null_values_for_Currencies(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "output": [
+              "Actual status code : \u0027200\u0027 matches with expected status code : \u0027200\u0027",
+              "Actual response base currency : \u0027USD\u0027 matches with expected base currency : \u0027USD\u0027"
+            ],
+            "result": {
+              "duration": 7585800,
+              "status": "passed"
+            },
+            "line": 53,
+            "name": "Response should contain base currency as \"USD\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "USD",
+                  "offset": 42
+                }
+              ],
+              "location": "ConversionRatesAPISteps.response_should_contain_base_currency_as(String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@PastConversionRates"
+          },
+          {
+            "name": "@UAT"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "output": [
+              "URI under testhttps://api.ratesapi.io/api/latest",
+              "API is up and running"
+            ],
+            "result": {
+              "duration": 432527200,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Foreign Exchange Rates API is accessible",
+            "match": {
+              "location": "ConversionRatesAPISteps.isForeignExchangeAPIAccessible()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-02T11:10:09.705Z",
+        "before": [
+          {
+            "result": {
+              "duration": 103300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "ConversionRatesAPISteps.SetUp(Scenario)"
+            }
+          }
+        ],
+        "line": 71,
+        "name": "Validate that API returns data for today when queried for a future date",
+        "description": "",
+        "id": "get-and-validate-conversion-rates-for-past-and-future-dates-using-foreign-exchange-rates-api;validate-that-api-returns-data-for-today-when-queried-for-a-future-date;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "output": [
+              "Hitting endpoint \u0027https://api.ratesapi.io/api/ with base \u003d EUR",
+              "Response received : {\"base\":\"EUR\",\"rates\":{\"GBP\":0.89673,\"HKD\":8.6165,\"IDR\":16240.48,\"ILS\":3.8947,\"DKK\":7.4549,\"INR\":83.938,\"CHF\":1.0686,\"MXN\":24.452,\"CZK\":26.859,\"SGD\":1.5669,\"THB\":35.204,\"HRK\":7.5895,\"MYR\":4.8004,\"NOK\":10.789,\"CNY\":7.9327,\"BGN\":1.9558,\"PHP\":55.947,\"SEK\":10.4635,\"PLN\":4.4278,\"ZAR\":19.3993,\"CAD\":1.5228,\"ISK\":151.0,\"BRL\":5.9276,\"RON\":4.8437,\"NZD\":1.7824,\"TRY\":7.5743,\"JPY\":119.75,\"RUB\":77.4378,\"KRW\":1364.44,\"USD\":1.1116,\"HUF\":345.45,\"AUD\":1.6488},\"date\":\"2020-06-01\"}"
+            ],
+            "result": {
+              "duration": 434427600,
+              "status": "passed"
+            },
+            "line": 63,
+            "name": "API is hit with end point as \"2020-06-03\" \"base\" \"EUR\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2020-06-03",
+                  "offset": 30
+                },
+                {
+                  "val": "base",
+                  "offset": 43
+                },
+                {
+                  "val": "EUR",
+                  "offset": 50
+                }
+              ],
+              "location": "ConversionRatesAPISteps.api_is_hit_with_end_point_as(String,String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "output": [
+              "Actual status code : \u0027200\u0027 matches with expected status code : \u0027200\u0027"
+            ],
+            "result": {
+              "duration": 596200,
+              "status": "passed"
+            },
+            "line": 64,
+            "name": "API Should respond with status code as \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 40
+                }
+              ],
+              "location": "ConversionRatesAPISteps.api_Should_respond_with_status_code_as(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "error_message": "org.junit.ComparisonFailure: expected:\u003c2020-06-0[2]\u003e but was:\u003c2020-06-0[1]\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:117)\r\n\tat org.junit.Assert.assertEquals(Assert.java:146)\r\n\tat stepDefinitions.ConversionRatesAPISteps.Response_should_contain_expected_date(ConversionRatesAPISteps.java:183)\r\n\tat ✽.Response should contain date as \"Today\"(file:src/test/resources/features/ConversionRates.feature:65)\r\n",
+              "duration": 9156200,
+              "status": "failed"
+            },
+            "line": 65,
+            "name": "Response should contain date as \"Today\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Today",
+                  "offset": 33
+                }
+              ],
+              "location": "ConversionRatesAPISteps.Response_should_contain_expected_date(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 352600,
+              "status": "skipped"
+            },
+            "line": 66,
+            "name": "Response for future date should match with response for today",
+            "match": {
+              "location": "ConversionRatesAPISteps.response_for_future_date_should_match_with_response_for_today()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 260300,
+              "status": "skipped"
+            },
+            "line": 67,
+            "name": "Response should contain not null values for \"NZD,INR\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "NZD,INR",
+                  "offset": 45
+                }
+              ],
+              "location": "ConversionRatesAPISteps.response_should_contain_not_null_values_for_Currencies(String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@FutureConversionRates"
+          },
+          {
+            "name": "@UAT"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "output": [
+              "URI under testhttps://api.ratesapi.io/api/latest",
+              "API is up and running"
+            ],
+            "result": {
+              "duration": 429856300,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Foreign Exchange Rates API is accessible",
+            "match": {
+              "location": "ConversionRatesAPISteps.isForeignExchangeAPIAccessible()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-02T11:10:10.592Z",
+        "before": [
+          {
+            "result": {
+              "duration": 411700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "ConversionRatesAPISteps.SetUp(Scenario)"
+            }
+          }
+        ],
+        "line": 72,
+        "name": "Validate that API returns data for today when queried for a future date",
+        "description": "",
+        "id": "get-and-validate-conversion-rates-for-past-and-future-dates-using-foreign-exchange-rates-api;validate-that-api-returns-data-for-today-when-queried-for-a-future-date;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "output": [
+              "Hitting endpoint \u0027https://api.ratesapi.io/api/ with base \u003d EUR",
+              "Response received : {\"base\":\"EUR\",\"rates\":{\"GBP\":0.89673,\"HKD\":8.6165,\"IDR\":16240.48,\"ILS\":3.8947,\"DKK\":7.4549,\"INR\":83.938,\"CHF\":1.0686,\"MXN\":24.452,\"CZK\":26.859,\"SGD\":1.5669,\"THB\":35.204,\"HRK\":7.5895,\"MYR\":4.8004,\"NOK\":10.789,\"CNY\":7.9327,\"BGN\":1.9558,\"PHP\":55.947,\"SEK\":10.4635,\"PLN\":4.4278,\"ZAR\":19.3993,\"CAD\":1.5228,\"ISK\":151.0,\"BRL\":5.9276,\"RON\":4.8437,\"NZD\":1.7824,\"TRY\":7.5743,\"JPY\":119.75,\"RUB\":77.4378,\"KRW\":1364.44,\"USD\":1.1116,\"HUF\":345.45,\"AUD\":1.6488},\"date\":\"2020-06-01\"}"
+            ],
+            "result": {
+              "duration": 435757700,
+              "status": "passed"
+            },
+            "line": 63,
+            "name": "API is hit with end point as \"2020-12-31\" \"base\" \"EUR\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2020-12-31",
+                  "offset": 30
+                },
+                {
+                  "val": "base",
+                  "offset": 43
+                },
+                {
+                  "val": "EUR",
+                  "offset": 50
+                }
+              ],
+              "location": "ConversionRatesAPISteps.api_is_hit_with_end_point_as(String,String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "output": [
+              "Actual status code : \u0027200\u0027 matches with expected status code : \u0027200\u0027"
+            ],
+            "result": {
+              "duration": 1036000,
+              "status": "passed"
+            },
+            "line": 64,
+            "name": "API Should respond with status code as \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 40
+                }
+              ],
+              "location": "ConversionRatesAPISteps.api_Should_respond_with_status_code_as(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "error_message": "org.junit.ComparisonFailure: expected:\u003c2020-06-0[2]\u003e but was:\u003c2020-06-0[1]\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:117)\r\n\tat org.junit.Assert.assertEquals(Assert.java:146)\r\n\tat stepDefinitions.ConversionRatesAPISteps.Response_should_contain_expected_date(ConversionRatesAPISteps.java:183)\r\n\tat ✽.Response should contain date as \"Today\"(file:src/test/resources/features/ConversionRates.feature:65)\r\n",
+              "duration": 7707400,
+              "status": "failed"
+            },
+            "line": 65,
+            "name": "Response should contain date as \"Today\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Today",
+                  "offset": 33
+                }
+              ],
+              "location": "ConversionRatesAPISteps.Response_should_contain_expected_date(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 252000,
+              "status": "skipped"
+            },
+            "line": 66,
+            "name": "Response for future date should match with response for today",
+            "match": {
+              "location": "ConversionRatesAPISteps.response_for_future_date_should_match_with_response_for_today()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 236100,
+              "status": "skipped"
+            },
+            "line": 67,
+            "name": "Response should contain not null values for \"NZD,INR\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "NZD,INR",
+                  "offset": 45
+                }
+              ],
+              "location": "ConversionRatesAPISteps.response_should_contain_not_null_values_for_Currencies(String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@FutureConversionRates"
+          },
+          {
+            "name": "@UAT"
+          }
+        ]
+      }
+    ],
+    "name": "Get and validate conversion rates for past and future dates using Foreign Exchange Rates API",
+    "description": "  Description: Validate that Foreign Exchange Rates API is fit for consumption for financial reasons",
+    "id": "get-and-validate-conversion-rates-for-past-and-future-dates-using-foreign-exchange-rates-api",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/ConversionRates.feature",
+    "tags": []
+  }
+]
