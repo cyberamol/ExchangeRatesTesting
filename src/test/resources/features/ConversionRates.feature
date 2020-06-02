@@ -11,10 +11,12 @@ Feature: Get and validate conversion rates for past and future dates using Forei
     And Response should contain not null values for "<BaseCurrency>"
 
     Examples: 
-      | EndPoint | QueryParam | BaseCurrency | StatusCode |
-      | latest   | symbols    | GBP          |        200 |
-      | latest   | symbols    | USD,GBP      |        200 |
-      | latest   | base       | GBP          |        200 |
+      | EndPoint   | QueryParam | BaseCurrency | StatusCode |
+      | latest     | symbols    | GBP          |        200 |
+      | latest     | symbols    | USD,GBP      |        200 |
+      | latest     | base       | GBP          |        200 |
+      | 2020-06-01 | base       | GBP          |        200 |
+      | 2020-05-31 | symbols    | USD,GBP      |        200 |
 
   @UAT @Regression
   Scenario Outline: Confirm that API responds with correct base value for currency based on input
@@ -41,7 +43,7 @@ Feature: Get and validate conversion rates for past and future dates using Forei
     Examples: 
       | EndPoint | StatusCode | ErrorMessage                 |
       | BKG      |        400 | Base 'BKG' is not supported. |
-      | 123      |        400 | Base '123' is not supported. |
+      |      123 |        400 | Base '123' is not supported. |
       | @#$      |        400 | Base '@#$' is not supported. |
 
   @PastConversionRates @UAT @Regression
