@@ -16,49 +16,45 @@
 	</properties>
 
 	<dependencies>
-	
-	<!-- https://mvnrepository.com/artifact/junit/junit -->
-<dependency>
-    <groupId>junit</groupId>
-    <artifactId>junit</artifactId>
-    <version>4.13</version>
-</dependency>
 
-<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java8 -->
+		<!-- https://mvnrepository.com/artifact/junit/junit -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.13</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java8 -->
 		<dependency>
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-java8</artifactId>
 			<version>4.8.1</version>
 		</dependency>
-		
-	
+
 		<!-- https://mvnrepository.com/artifact/info.cukes/gherkin -->
 		<dependency>
-		    <groupId>info.cukes</groupId>
-		    <artifactId>gherkin</artifactId>
-		    <version>2.12.2</version>
-		    <scope>provided</scope>
+			<groupId>info.cukes</groupId>
+			<artifactId>gherkin</artifactId>
+			<version>2.12.2</version>
+			<scope>provided</scope>
 		</dependency>
-
 
 		<!-- https://mvnrepository.com/artifact/info.cukes/cucumber-core -->
 		<dependency>
-		    <groupId>info.cukes</groupId>
-		    <artifactId>cucumber-core</artifactId>
-		    <version>1.2.6</version>
-		    <type>pom</type>
+			<groupId>info.cukes</groupId>
+			<artifactId>cucumber-core</artifactId>
+			<version>1.2.6</version>
+			<type>pom</type>
 		</dependency>
 
-
-<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-core -->
+		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-core -->
 		<dependency>
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-core</artifactId>
 			<version>4.8.1</version>
 		</dependency>
 
-
-<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
+		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
 		<dependency>
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-junit</artifactId>
@@ -66,44 +62,35 @@
 			<scope>test</scope>
 		</dependency>
 
-
-	
-
-		
-
-
-
 		<!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
 		<dependency>
-		    <groupId>io.rest-assured</groupId>
-		    <artifactId>rest-assured</artifactId>
-		    <version>4.3.0</version>
-		    <scope>test</scope>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>rest-assured</artifactId>
+			<version>4.3.0</version>
+			<scope>test</scope>
 		</dependency>
 
-		
-		
-		
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-api</artifactId>
+			<version>2.13.3</version>
+		</dependency>
 
-  <dependency>
-    <groupId>org.apache.logging.log4j</groupId>
-    <artifactId>log4j-api</artifactId>
-    <version>2.13.3</version>
-  </dependency>
-  <dependency>
-    <groupId>org.apache.logging.log4j</groupId>
-    <artifactId>log4j-core</artifactId>
-    <version>2.13.3</version>
-  </dependency>
-  <!-- https://mvnrepository.com/artifact/log4j/log4j -->
-<dependency>
-    <groupId>log4j</groupId>
-    <artifactId>log4j</artifactId>
-    <version>1.2.17</version>
-</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>2.13.3</version>
+		</dependency>
 
-<!-- Extent Reports 4 Plugin-->
-		
+		<!-- https://mvnrepository.com/artifact/log4j/log4j -->
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
+
+		<!-- Extent Reports 4 Plugin -->
+
 		<dependency>
 			<groupId>com.aventstack</groupId>
 			<artifactId>extentreports-cucumber4-adapter</artifactId>
@@ -119,10 +106,8 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-		
-	
 	</dependencies>
-	
+
 	<build>
 		<plugins>
 			<plugin>
@@ -143,10 +128,10 @@
 					<testFailureIgnore>true</testFailureIgnore>
 				</configuration>
 			</plugin>
-			
-			
-			<!-- Latest Cucumber JVM Reports Plugin-->
-			
+
+
+			<!-- Latest Cucumber JVM Reports Plugin -->
+
 
 			<plugin>
 				<groupId>net.masterthought</groupId>
@@ -176,11 +161,7 @@
 						</configuration>
 					</execution>
 				</executions>
-
-
-
 			</plugin>
-
 		</plugins>
 	</build>
 </project>
