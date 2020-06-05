@@ -70,6 +70,7 @@ public class TestBase {
 		} catch (Exception e) {
 			e.printStackTrace();
 			logger.error("Exception caught : " + e.getMessage());
+			throw new RuntimeException("TestBase::isAPIAccessible() -> Exception caught : " + e.getMessage()); 
 		}
 	}
 
@@ -96,6 +97,7 @@ public class TestBase {
 		} catch (Exception e) {
 			e.printStackTrace();
 			logger.error("Exception caught : " + e.getMessage());
+			throw new RuntimeException("TestBase::hitEndpoint() -> Exception caught : " + e.getMessage());
 		}
 	}
 
@@ -126,6 +128,7 @@ public class TestBase {
 		} catch (Exception e) {
 			e.printStackTrace();
 			logger.error("Exception caught : " + e.getMessage());
+			throw new RuntimeException("TestBase::hitEndpoint() -> Exception caught : " + e.getMessage());
 		}
 	}
 }
